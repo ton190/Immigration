@@ -1,0 +1,45 @@
+@use '../../basic' as *;
+
+.section_10{
+    .container{
+        display: flex;
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+        .box{
+            padding: pg(400);
+            background-image: url("/pics/flag.webp");
+            background-size: auto 100%;
+            display: grid;
+            gap: pg(400);
+            text-align: center;
+            > div{
+                display: grid;
+                gap: pg(200);
+                // justify-items: center;
+            }
+            p{
+                margin: 0;
+            }
+            .icons{
+                display: flex;
+                flex-wrap: wrap;
+                gap: pg(100);
+                justify-content: center;
+                align-items: center;
+                > div{
+                    display: grid;
+                    gap: pg(50);
+                    justify-items: center;
+                }
+            }
+            button{
+                text-transform: uppercase;
+            }
+        }
+         .img1{
+            max-width:450px;
+            height: auto;
+            width: 100%
+        }
+    }
+}

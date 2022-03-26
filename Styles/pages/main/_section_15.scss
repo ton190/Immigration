@@ -1,0 +1,18 @@
+@use '../../basic' as *;
+
+.section_15{
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        gap: pg(200);
+        justify-content: center;
+        div{
+            width:100px;
+            height: 100px;
+            display: grid;
+            justify-items: center;
+            align-items: center;
+        }
+    }
+}
+

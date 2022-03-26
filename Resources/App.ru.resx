@@ -1,0 +1,569 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="m b1" xml:space="preserve">
+    <value>Почему мы</value>
+  </data>
+  <data name="m b2" xml:space="preserve">
+    <value>Услуги</value>
+  </data>
+  <data name="m b3" xml:space="preserve">
+    <value>Цены</value>
+  </data>
+  <data name="m b4" xml:space="preserve">
+    <value>Требования</value>
+  </data>
+  <data name="m b5" xml:space="preserve">
+    <value>Почему Канада</value>
+  </data>
+  <data name="m b6" xml:space="preserve">
+    <value>Вопросы</value>
+  </data>
+  <data name="h p3" xml:space="preserve">
+    <value>Звоните, мы сейчас работаем{0}
++1(647)648-7822</value>
+  </data>
+  <data name="h p2" xml:space="preserve">
+    <value>Анкета: Оцените Ваши Шансы</value>
+  </data>
+  <data name="h p1" xml:space="preserve">
+    <value>Рейтинг 4,67.{0}
+На основе{0}
+209 отзывов</value>
+  </data>
+  <data name="s1 t1" xml:space="preserve">
+    <value>Легально с полной прозрачностью и индивидуальным подходом!</value>
+  </data>
+  <data name="s1 t2" xml:space="preserve">
+    <value>Осуществляем Вашу Мечту в получении {0}Визы, Вида на Жительство и Гражданства Канады.{1}</value>
+  </data>
+  <data name="s1 p1" xml:space="preserve">
+    <value>91.7% положительного результата подач</value>
+  </data>
+  <data name="s1 p2" xml:space="preserve">
+    <value>В штате сертифицированные консультанты и юристы</value>
+  </data>
+  <data name="s1 p3" xml:space="preserve">
+    <value>Наш офис находится в Торонто</value>
+  </data>
+  <data name="s1 p4" xml:space="preserve">
+    <value>Получите консультацию специалиста сразу в:</value>
+  </data>
+  <data name="s2 t1" xml:space="preserve">
+    <value>Здравствуйте, меня зовут Ирина</value>
+  </data>
+  <data name="s2 t2" xml:space="preserve">
+    <value>Я руководитель и основатель компании Trevisa</value>
+  </data>
+  <data name="s2 t3" xml:space="preserve">
+    <value>Я заявляю и беру на себя полную ответственность перед вами за:</value>
+  </data>
+  <data name="s2 p1" xml:space="preserve">
+    <value>- Стоимость наших услуг опубликована на сайте. Оказание услуг оформляется официальным договором, она окончательная и не изменится в процессе работы</value>
+  </data>
+  <data name="s2 p2" xml:space="preserve">
+    <value>- Полную прозрачность. Мы знаем закон и работаем легально. Будьте бдительны и работайте с проверенными компаниями.</value>
+  </data>
+  <data name="s2 p3" xml:space="preserve">
+    <value>- Результат - мы реально помогаем получить Вам документы. Уже помогли с документами 372 клиентам. Около 92% подач с положительным результатом. Мы приложим все усилия,чтобы Вы были в их числе. Ведь мы действительно хотим помочь Вам!</value>
+  </data>
+  <data name="s2 p4" xml:space="preserve">
+    <value>- Мы дорожим своей репутацией, ведь 40% наших клиентов - это рекомендации. Для нас важно мнение каждого клиента.</value>
+  </data>
+  <data name="s3 t1" xml:space="preserve">
+    <value>Почему стоит выбрать Trevisa?</value>
+  </data>
+  <data name="s3 t2" xml:space="preserve">
+    <value>Быстрые и надежные услуги по иммиграции в Канаду</value>
+  </data>
+  <data name="s3 p1" xml:space="preserve">
+    <value>Консультация</value>
+  </data>
+  <data name="s3 p2" xml:space="preserve">
+    <value>Оценка шансов</value>
+  </data>
+  <data name="s3 p3" xml:space="preserve">
+    <value>Иммиграционный план</value>
+  </data>
+  <data name="s3 p4" xml:space="preserve">
+    <value>Своевременность</value>
+  </data>
+  <data name="s3 p5" xml:space="preserve">
+    <value>Заполнение документов</value>
+  </data>
+  <data name="s3 p6" xml:space="preserve">
+    <value>Поддержка 24/7</value>
+  </data>
+  <data name="s4 t1" xml:space="preserve">
+    <value>С нами Вы получите Документы без Нервов, Стрессов и Переплат</value>
+  </data>
+  <data name="s4 p1t" xml:space="preserve">
+    <value>Каждому Индивидуальный Подход.</value>
+  </data>
+  <data name="s4 p1" xml:space="preserve">
+    <value>Наш иммиграционный консультант подробно проверит, проанализирует вашу ситуацию и разработает планее решения.</value>
+  </data>
+  <data name="s4 p2t" xml:space="preserve">
+    <value>Правдивая и Подробная Информация.</value>
+  </data>
+  <data name="s4 p2" xml:space="preserve">
+    <value>Предоставим Вам правдивую и подробную информацию. Если шансы успеха малы то нет оснований на подачу.</value>
+  </data>
+  <data name="s4 p3t" xml:space="preserve">
+    <value>Официальный Договор.</value>
+  </data>
+  <data name="s4 p3" xml:space="preserve">
+    <value>Заключаем прозрачный официальный договор, где прописываем все условия.</value>
+  </data>
+  <data name="s4 p4t" xml:space="preserve">
+    <value>Фиксированная Стоимость.</value>
+  </data>
+  <data name="s4 p4" xml:space="preserve">
+    <value>Стоимость услуг не увеличится в процессе оформления и ожидания.</value>
+  </data>
+  <data name="s4 p5t" xml:space="preserve">
+    <value>Поэтапная Оплата.</value>
+  </data>
+  <data name="s4 p5" xml:space="preserve">
+    <value>Поэтапная оплата за наши услуги по мере продвижения результата.</value>
+  </data>
+  <data name="s4 p6t" xml:space="preserve">
+    <value>Помошь и Сопровождение.</value>
+  </data>
+  <data name="s4 p6" xml:space="preserve">
+    <value>Помогаем с перелетом, жильем и адаптацией.</value>
+  </data>
+  <data name="s5 t1" xml:space="preserve">
+    <value>Наши Основные услуги</value>
+  </data>
+  <data name="s5 t2" xml:space="preserve">
+    <value>Обращайтесь за оперативной иммиграционной помощью. Мы знаем, что делать.</value>
+  </data>
+  <data name="s5 p1t" xml:space="preserve">
+    <value>Экспресс-вьезд</value>
+  </data>
+  <data name="s5 p2t" xml:space="preserve">
+    <value>Семейное спонсорство</value>
+  </data>
+  <data name="s5 p1" xml:space="preserve">
+    <value>Самая популярная категория для получения ПМЖ. Кандидаты, имеющие право на участие в Express Entry, могут загрузить свой профиль на веб-сайт федерального правительства.</value>
+  </data>
+  <data name="s5 p2" xml:space="preserve">
+    <value>Воссоеденение членов семьи в Канаде в рамках программы семейного спонсорства и получения статус PR. Канада уделяет первостепенное внимание семьям, которые хотят воссоединиться с членами своей семьи в Канаде.</value>
+  </data>
+  <data name="s5 p3t" xml:space="preserve">
+    <value>Учебная / Визит виза</value>
+  </data>
+  <data name="s5 p3" xml:space="preserve">
+    <value>В Канаде один из самых высоких стандартов образования. в мире! Мы приветствуем студентов каждый год, чтобы реализовать свои мечты об учебе в Канаде. Мы подготовливаем полное заявление на получение визы временного резидента (TRV) чтобы гарантироватьнаилучшие шансы..</value>
+  </data>
+  <data name="s5 p4t" xml:space="preserve">
+    <value>Бизнес-иммиграция</value>
+  </data>
+  <data name="s5 p4" xml:space="preserve">
+    <value>Если вы деловой человек или менеджер, желающий иммигрировать в Канаду, канадские федеральные и провинциальные правительства предлагают ряд вариантов, которые могут позволить вам ускорить процесс иммиграции в Канаду</value>
+  </data>
+  <data name="s5 p5t" xml:space="preserve">
+    <value>Разрешение на работу</value>
+  </data>
+  <data name="s5 p5" xml:space="preserve">
+    <value>Разрешения на работу уполномочивает иностранного работника работать и зарабатывать на жизнь в Канада. Открытые разрешения на работу разрешает физическим лицам работать на любого канадского работодателя.</value>
+  </data>
+  <data name="s6 t1" xml:space="preserve">
+    <value>Цены</value>
+  </data>
+  <data name="s6 p1t" xml:space="preserve">
+    <value>Посетители</value>
+  </data>
+  <data name="s6 p1.1" xml:space="preserve">
+    <value>Постоянный посетитель – 1-й раз</value>
+  </data>
+  <data name="s6 p1.2" xml:space="preserve">
+    <value>Постоянный посетитель - продление</value>
+  </data>
+  <data name="s6 p1.3" xml:space="preserve">
+    <value>Супервиза для родителей/бабушек и дедушек - 1-й раз</value>
+  </data>
+  <data name="s6 p1.4" xml:space="preserve">
+    <value>Супервиза для родителей/бабушек и дедушек - продление</value>
+  </data>
+  <data name="s6 p2t" xml:space="preserve">
+    <value>Студенты</value>
+  </data>
+  <data name="s6 p2.1" xml:space="preserve">
+    <value>Разрешение на учебу - 1-й раз</value>
+  </data>
+  <data name="s6 p2.2" xml:space="preserve">
+    <value>Разрешение на учебу внутри Канады</value>
+  </data>
+  <data name="s6 p2.3" xml:space="preserve">
+    <value>Продление разрешения на учебу</value>
+  </data>
+  <data name="s6 p2.4" xml:space="preserve">
+    <value>Разрешение на работу в аспирантуре</value>
+  </data>
+  <data name="s6 p3t" xml:space="preserve">
+    <value>Провинциальные номинации</value>
+  </data>
+  <data name="s6 p3.1" xml:space="preserve">
+    <value>Онтарио, аспирант</value>
+  </data>
+  <data name="s6 p3.2" xml:space="preserve">
+    <value>Манитоба, квалифицированный рабочий</value>
+  </data>
+  <data name="s6 p3.3" xml:space="preserve">
+    <value>Атлантический пилот, квалифицированный рабочий</value>
+  </data>
+  <data name="s6 p4t" xml:space="preserve">
+    <value>Рабочие</value>
+  </data>
+  <data name="s6 p4.1" xml:space="preserve">
+    <value>Разрешение на работу с действующим LMIA – 1-й раз</value>
+  </data>
+  <data name="s6 p4.2" xml:space="preserve">
+    <value>Разрешение на работу с действующим LMIA – продление</value>
+  </data>
+  <data name="s6 p4.3" xml:space="preserve">
+    <value>Разрешение на работу, где требуется LMIA – 1-й раз</value>
+  </data>
+  <data name="s6 p4.4" xml:space="preserve">
+    <value>Разрешение на работу там, где требуется LMIA – внутри Канады</value>
+  </data>
+  <data name="s6 p4.5" xml:space="preserve">
+    <value>Разрешение на работу с освобождением от LMIA, бизнес - категория – 1-й раз</value>
+  </data>
+  <data name="s6 p4.6" xml:space="preserve">
+    <value>Разрешение на работу с освобождением от LMIA, бизнес - категория — внутри Канады</value>
+  </data>
+  <data name="s6 p4.7" xml:space="preserve">
+    <value>Разрешение на работу с освобождением от LMIA, семейная категория – первый въезд</value>
+  </data>
+  <data name="s6 p4.8" xml:space="preserve">
+    <value>Разрешение на работу с освобождением от LMIA, семейная категория – внутри Канады</value>
+  </data>
+  <data name="s6 p5t" xml:space="preserve">
+    <value>ПМЖ</value>
+  </data>
+  <data name="s6 p5.1" xml:space="preserve">
+    <value>Work Permit with LMIA exemption, business – inside Canada</value>
+  </data>
+  <data name="s6 p5.2" xml:space="preserve">
+    <value>Work Permit with LMIA exemption, business – inside Canada</value>
+  </data>
+  <data name="s6 p5.3" xml:space="preserve">
+    <value>Work Permit with LMIA exemption, business – inside Canada</value>
+  </data>
+  <data name="s6 p5.4" xml:space="preserve">
+    <value>Work Permit with LMIA exemption, business – inside Canada</value>
+  </data>
+  <data name="s6 t2" xml:space="preserve">
+    <value>Обратите внимание все цены в долларах США и государсвенные пошлины не включины.{0}
+Это цены на часто запрашиваемые услуги и для получения полного перечня услуг свяжитесь с нами.</value>
+  </data>
+  <data name="s8 t1" xml:space="preserve">
+    <value>Канадский Иммиграционный Консультант</value>
+  </data>
+  <data name="s8 t2" xml:space="preserve">
+    <value>Регистрационный номер RCIC: #R705990</value>
+  </data>
+  <data name="s8 p1.1" xml:space="preserve">
+    <value>Адель Голод</value>
+  </data>
+  <data name="s8 p1.2" xml:space="preserve">
+    <value>Toronto, Canada</value>
+  </data>
+  <data name="s8 p2" xml:space="preserve">
+    <value>Адель Голод - Канадский лицензированный иммиграционный
+консультанр, имеющий право консультировать клиентов в
+отношении их шансов и опций иммиграции в Канаду, а так же
+представлять Ваши интересы перед канадскими иммиграционными властями.</value>
+  </data>
+  <data name="s8 b1" xml:space="preserve">
+    <value>Заказать консультацию</value>
+  </data>
+  <data name="s9 p6" xml:space="preserve">
+    <value>Справка о несудимости (PCC)</value>
+  </data>
+  <data name="s9 t1" xml:space="preserve">
+    <value>Ключевые требования для иммиграции в Канаду</value>
+  </data>
+  <data name="s9 t2" xml:space="preserve">
+    <value>Несмотря на то что все программы имеют разные критерии, для большинства
+иммиграционных программ остается несколько общих требований к документам</value>
+  </data>
+  <data name="s9 p1" xml:space="preserve">
+    <value>Минимальная необходимая квалификация</value>
+  </data>
+  <data name="s9 p2" xml:space="preserve">
+    <value>Результат теста на знание английского/французского языка</value>
+  </data>
+  <data name="s9 p3" xml:space="preserve">
+    <value>Набор оптимального количества баллов</value>
+  </data>
+  <data name="s9 p4" xml:space="preserve">
+    <value>Документы, подтверждающие трудовой стаж</value>
+  </data>
+  <data name="s9 p5" xml:space="preserve">
+    <value>Прохождении медкомиссии</value>
+  </data>
+  <data name="s10 t1" xml:space="preserve">
+    <value>Начните с Оценки Шансов</value>
+  </data>
+  <data name="s10 t2" xml:space="preserve">
+    <value>Получите {0}Kонсультацию Иммиграционного Специалиста{1} - БЕСПЛАТНО</value>
+  </data>
+  <data name="s10 p1.1" xml:space="preserve">
+    <value>Задайте любой вопрос напрямую в:</value>
+  </data>
+  <data name="s10 p1.2" xml:space="preserve">
+    <value>Или просто введите ваш телефон,
+чтобы оставить заявку</value>
+  </data>
+  <data name="s10 b1" xml:space="preserve">
+    <value>Отправить заявку</value>
+  </data>
+  <data name="s10 p1.3" xml:space="preserve">
+    <value>Я согласен с условиями политики конфиденциальности</value>
+  </data>
+  <data name="s11 t2" xml:space="preserve">
+    <value>Ни один лицензированный иммиграционный консультант не имеет права гарантировать 100% успех, {0}НО при этом{1}</value>
+  </data>
+  <data name="s11 t1" xml:space="preserve">
+    <value>Будьте Внимательны</value>
+  </data>
+  <data name="s11 p1" xml:space="preserve">
+    <value>С Вами стараются заключить договор, при низких шансах на успех. Позже объясняют, что брали деньги только за анализ документов.</value>
+  </data>
+  <data name="s11 p2" xml:space="preserve">
+    <value>Стоимость на сайте одна - в офисе уже больше. Специальное занижение цены, чтобы "заманить" новых клиентов.</value>
+  </data>
+  <data name="s11 p3" xml:space="preserve">
+    <value>Вам придется переподавать документы по нескольку раз. Компании допускают ошибки, прекрываясь изменчивым иммиграционным законодательством</value>
+  </data>
+  <data name="s11 t3" xml:space="preserve">
+    <value>Это факт: с 2018 года мы помогли получить документы 200+ клиентам со всего мира.</value>
+  </data>
+  <data name="s12 t1" xml:space="preserve">
+    <value>Мы Гордимся тем что Делаем</value>
+  </data>
+  <data name="s13 t1" xml:space="preserve">
+    <value>Канада это Лучшее Решение для Иммиграции</value>
+  </data>
+  <data name="s13 p1" xml:space="preserve">
+    <value>Высокий Уровень Безопасности</value>
+  </data>
+  <data name="s13 p2" xml:space="preserve">
+    <value>Экономическая Стабильность</value>
+  </data>
+  <data name="s13 p3" xml:space="preserve">
+    <value>Бесплатное Медицинское Обслуживание</value>
+  </data>
+  <data name="s13 p4" xml:space="preserve">
+    <value>Система Социального Обеспечения</value>
+  </data>
+  <data name="s13 p5" xml:space="preserve">
+    <value>Качественное и Доступное Образование</value>
+  </data>
+  <data name="s13 p6" xml:space="preserve">
+    <value>Экологически Чистая Природа</value>
+  </data>
+  <data name="s13 p7" xml:space="preserve">
+    <value>Канада - Страна Иммигрантов</value>
+  </data>
+  <data name="s13 p8" xml:space="preserve">
+    <value>Лучшая Страна для Жизни</value>
+  </data>
+  <data name="s14 t1" xml:space="preserve">
+    <value>Начните Свою Историю Успеха</value>
+  </data>
+  <data name="s14 p1.1" xml:space="preserve">
+    <value>Получите бесплатную консультацию и рекомендации по лучшим вариантам</value>
+  </data>
+  <data name="s14 p1.2" xml:space="preserve">
+    <value>Как уехать жить, учиться или работать в Канаду!</value>
+  </data>
+  <data name="s14 b1" xml:space="preserve">
+    <value>Заказать консультацию</value>
+  </data>
+  <data name="s15 t1" xml:space="preserve">
+    <value>Учебные Заведения - Наши Партнеры</value>
+  </data>
+  <data name="s16 t1" xml:space="preserve">
+    <value>Вопросы-Ответы</value>
+  </data>
+  <data name="s16 p1.1" xml:space="preserve">
+    <value>Как работает форма IMM5409 – Декларация гражданского партнерства? Срок его действия истекает? Если отношения закончились, должен ли я их отменить?</value>
+  </data>
+  <data name="s16 p1.2" xml:space="preserve">
+    <value>Форма бессрочная, для иммиграционных целей она работает так же, как свидетельство о браке. 
+Если отношения закончились, нет необходимости их отменять или оформлять какие-либо другие документы. Если вы
+когда-либо подавали иммиграционное заявление, в котором объявляли гражданский союз, вы должны помнить, что
+нельзя пропускать его в каких-либо новых заявлениях, которые вы можете подать в будущем.</value>
+  </data>
+  <data name="s16 p2.1" xml:space="preserve">
+    <value>Я подаю заявление на получение разрешения на работу за пределами Канады. 
+Лучше подавать заявление одному или с семьей на иждивении?</value>
+  </data>
+  <data name="s16 p3.1" xml:space="preserve">
+    <value>У меня есть ребенок, который является гражданином Канады. Должен ли я упоминать
+ребенка в общей форме заявления? Должен ли я предоставлять фотографии ребенка?</value>
+  </data>
+  <data name="s16 p4.1" xml:space="preserve">
+    <value>Я сдал биометрические данные в декабре 2020 года, нужно ли мне снова платить за них при оплате
+сборов? Или просто отправьте номер IRCC тега, который они дали мне, когда я их делал?</value>
+  </data>
+  <data name="s16 p5.1" xml:space="preserve">
+    <value>Мое образование и опыт работы никак не связаны. Должен ли я по-прежнему просто отправлять
+свой диплом и другие документы в WES для оценки, или мне нужно следовать другому подходу?</value>
+  </data>
+  <data name="s17 t1" xml:space="preserve">
+    <value>Связаться с Нами</value>
+  </data>
+  <data name="s17 b1" xml:space="preserve">
+    <value>Отправить</value>
+  </data>
+  <data name="s16 p2.2" xml:space="preserve">
+    <value>Это полностью ваше решение, и у обеих сторон есть свои плюсы и минусы.&lt;br&gt;
+Как правило, безопасно подавать заявление на получение разрешения на работу всей семьей, если ваш годовой доход, согласно вашему предложению о работе,
+равен или превышает двойную сумму необходимых расчетных средств для размера вашей семьи. например,
+для семьи с 2 детьми ваш валовой доход должен быть не менее @24 553*2=49 106.</value>
+  </data>
+  <data name="s16 p3.2" xml:space="preserve">
+    <value>Вы должны упомянуть ребенка в анкете и отметить, что он не включен в
+заявление в качестве гражданина Канады. Вам не нужно будет предоставлять фотографию этого ребенка, но
+необходимо доказательство канадского гражданства (паспорт свидетельства о рождении). Если вы должны предоставить
+подтверждение средств (POF) в вашем заявлении, ребенок должен будет фигурировать в расчете.</value>
+  </data>
+  <data name="s16 p4.2" xml:space="preserve">
+    <value>Ваши биометрические данные связаны с вашим номером UCI и действительны в течение 10 лет. Если специально
+запрашивается, вам не нужно ничего делать или загружать что-либо.</value>
+  </data>
+  <data name="s16 p5.2" xml:space="preserve">
+    <value>Нет требований, чтобы ваше образование и опыт работы были связаны между собой. оценка ВЭС
+дает вам определенное количество баллов в системе Express Entry, независимо от того,
+работал по профессии или нет. Точно так же ваш опыт работы оценивается независимо от того,
+или у вас нет соответствующего образования.</value>
+  </data>
+  <data name="m b0" xml:space="preserve">
+    <value>Главная</value>
+  </data>
+  <data name="page title" xml:space="preserve">
+    <value>Иммиграция в Канаду</value>
+  </data>
+</root>

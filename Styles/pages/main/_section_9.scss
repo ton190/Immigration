@@ -1,0 +1,26 @@
+@use '../../basic' as *;
+
+.section_9{
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .img1{
+            max-width: 346px;
+            width: 100%;
+            height: auto;
+        }
+        .box{
+            p{
+                &:before{
+                    content: '✔';
+                    color: clr(primary, highlight_1) ;
+                    font-weight: bold;
+                    font-size: 1.5em;
+                    padding-right: pg(100);
+                }
+            }
+        }
+    }
+}
+

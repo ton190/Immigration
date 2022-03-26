@@ -1,0 +1,11 @@
+@use '../basic' as *;
+
+.section_title{
+    width: fit-content;
+    display: grid;
+    gap: pg(200);
+    max-width: 850px;
+    @include mq(md){
+        text-align: center;
+    }
+}

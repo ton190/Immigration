@@ -1,0 +1,64 @@
+@page "/"
+
+<PageTitle>TreVisa - @Localizer["page title"]</PageTitle>
+
+
+<div class="main_layout @AppState?.MenuClass">
+    <div class="left_panel">
+        <div class=""><NavMenu/></div>
+    </div>
+    <div class="right_panel">
+        <div class="dark_bg @AppState?.DarkBgClass"></div>
+        <div class="top_panel">
+            <MenuToggle Collapsed="@_toggle_class"/>
+            <ChooseLanguage/>
+        </div>
+        <div class="body_panel">
+            <Header/>
+            <div class="nav_menu">
+                <NavMenu/>
+            </div>
+            <Section_1/>
+            <Section_2/>
+            <Section_3/>
+            <Section_4/>
+            <Section_5/>
+            <Section_6/>
+            <Section_8/>
+            <Section_9/>
+            <Section_10/>
+            <Section_11/>
+            <Section_12/>
+            <Section_13/>
+            <Section_14/>
+            <Section_15/>
+            <Section_16/>
+            <Section_17/>
+        </div>
+            <Footer/>
+    </div>
+</div>
+
+@* <h1>@Localizer["Title"]</h1> *@
+@* <h2>The Current culture is "@CultureInfo.CurrentCulture"</h2> *@
+@* <p>@DateTime.UtcNow.ToString()</p> *@
+
+@code{
+    private bool _collapsed = false;
+    private string? _toggle_class => AppState.MenuCollapsed ? "open" : null;
+
+    private void Toggle()
+    {
+        _collapsed = !_collapsed;
+    }
+
+    protected override void OnInitialized()
+    {
+        AppState.OnChange += StateHasChanged;
+    }
+
+    public void Dispose()
+    {
+        AppState.OnChange -= StateHasChanged;
+    }
+}

@@ -1,0 +1,39 @@
+@use '../../basic' as *;
+
+.section_8{
+    justify-self: center;
+    max-width: 800px;
+    .name{
+        white-space: nowrap;
+        display: grid;
+        justify-items: center;
+        @include mq(sm){
+            gap: pg(200);
+            grid-auto-flow: column;
+        }
+    }
+    .info{
+        display: grid;
+        justify-items: center;
+        gap: pg(200) pg(600);
+        @include mq(md){
+            align-items: start;
+            grid-template-rows:  min-content 1fr;
+            grid-template-columns: 1fr min-content;
+        }
+        div{
+            text-align: center;
+            p:first-child{
+                letter-spacing: .5em;
+                font-size: 1.2em;
+            }
+        }
+        img{
+            grid-row: span 2;
+        }
+    }
+    button{
+        text-transform: uppercase;
+    }
+}
+

@@ -1,0 +1,42 @@
+@use '../basic' as *;
+
+.dark_bg{
+    z-index: 5;
+    opacity: 0;
+    display: none;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 150px;
+    right: 0;
+    transition: opacity .3s linear;
+
+    &.open{
+        display: block;
+        animation: db_opening .3s linear forwards;
+        @include mq(md){
+            display: none;
+        }
+    }
+    &.closing{
+        display: block;
+        animation: db_closing .3s linear forwards;
+    }
+        @keyframes db_opening{
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: .5;
+            }
+        }
+        @keyframes db_closing{
+            from{
+                opacity: 0.5;
+            }
+            to{
+                opacity: 0;
+            }
+        }
+}

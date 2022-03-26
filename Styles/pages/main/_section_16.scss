@@ -1,0 +1,36 @@
+@use '../../basic' as *;
+
+.section_16{
+    .container{
+        max-width: 800px;
+        display: grid;
+        gap: pg(200);
+        details{
+            // -webkit-touch-callout: none; /* iOS Safari */
+            // -webkit-user-select: none; /* Safari */
+            // -khtml-user-select: none; /* Konqueror HTML */
+            // -moz-user-select: none; /* Old versions of Firefox */
+            // -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+
+            cursor: pointer;
+            padding: pg(400);
+            box-shadow: clr(primary, box_shadow) 0 0 5px 1px;
+            border-radius: 5px;
+            p{
+                cursor: initial;
+                padding-left: pg(200);
+                padding-top: pg(200);
+                margin: 0;
+                user-select: text;
+            }
+            &[open]{
+                color: clr(primary, highlight_5);
+                p{
+                    color: clr(primary,text);
+                }
+            }
+        }
+    }
+}
+

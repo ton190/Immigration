@@ -1,0 +1,67 @@
+@use '../../basic' as *;
+
+.section_2{
+    position: relative;
+    .section_title{
+        max-width: initial;
+        @include mq(sm){
+            text-align: center;
+            width: 100%;
+        }
+        @include mq(bg){
+            text-shadow: 0 0 10px #000,
+                         0 0 20px #000,
+                         0 0 30px #fff,
+                         0 0 40px #fff;
+            z-index: 2;
+            position: absolute;
+            top: 2.5em;
+            left: 0;
+            right: 0;
+            color: white;
+        }
+    }
+    .irina{
+        margin-top: 1em;
+        margin-right: 10%;
+        position: relative;
+        max-width: 1055;
+        width: 100%;
+    }
+    .guaranty{
+        display: grid;
+        gap: pg(50);
+        // color: clr(primary, highlight_1);
+        justify-self: center;
+        padding: pg(200);
+        box-shadow: clr(primary, box_shadow) 0 0 5px 1px;
+        margin: 5px;
+        @include mq(bg){
+            position: absolute;
+            top: 10em;
+            right: 0;
+            background: white;
+            max-width: 350px;
+        }
+        .box_title{
+            padding: pg(100);
+            font-weight: 500;
+        }
+        .promise{
+            border-top: 1px solid clr(primary, box_shadow);
+            display: grid;
+            gap: pg(200);
+            align-items: center;
+            padding: pg(200);
+            @include mq(sm){
+                grid-template-columns: 120px 1fr;
+            }
+            @include mq(bg){
+                padding: 0;
+            }
+            img{
+                justify-self: center;
+            }
+        }
+    }
+}

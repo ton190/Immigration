@@ -1,0 +1,25 @@
+@use '../../basic' as *;
+
+.section_5{
+    .options{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: pg(200);
+        div{
+            max-width: 180px;
+            padding: pg(200);
+            box-shadow: clr(primary, box_shadow) 0 0 5px 1px;
+            display: grid;
+            justify-items: center;
+            grid-template-rows: 4em 1fr 5em;
+            p:first-child{
+                white-space: nowrap;
+                text-align: center;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+

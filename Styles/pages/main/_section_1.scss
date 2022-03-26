@@ -1,0 +1,89 @@
+@use '../../basic' as *;
+
+.section_1{
+    .top{
+        display: grid;
+        gap: pg(400);
+        justify-items: center;
+        @include mq(bg){
+            grid-auto-flow: column;
+            grid-template-columns: max-content max-content;
+            grid-template-rows: max-content max-content;
+            .meating{
+                grid-row: span 2;
+            }
+        }
+        .legal{
+            max-width: 450px;
+            display: grid;
+            grid-auto-flow: column;
+            grid-template-columns: min-content fit-content;
+            gap: pg(200);
+            align-items: center;
+        }
+        .dream{
+            max-width: 450px;
+            span{
+                color: clr(primary, highlight_1);
+            }
+        }
+        img{
+            max-width: 100%;
+        }
+    }
+    .mid{
+        max-width: 1000px;
+        width:100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        @include mq(md){
+            justify-content: space-between;
+        }
+        gap: pg(400);
+        .box{
+            display: grid;
+            gap: pg(200);
+            justify-items: center;
+            width: 180px;
+            box-shadow: clr(primary, box_shadow) 0 0 5px 1px;
+            margin: 5px;
+            border-radius: 5px;
+            padding: pg(200);
+            p{
+                text-align: center;
+            }
+        }
+    }
+    .bottom{
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: pg(400);
+        .title{
+            text-align: center;
+            border-radius: 5em;
+            padding: pg(200) pg(400);
+            background: clr(primary, highlight_2);
+        }
+        .icons{
+            display: flex;
+            gap: pg(100);
+            align-items: center;
+            > div{
+                cursor: pointer;
+                display: grid;
+                justify-items: center;
+                gap: pg(50);
+                &:hover{
+                    img{
+                        transform: scale(1.1);
+                    }
+                }
+                img{
+                    transition: all .2s ease-in-out;
+                }
+            }
+        }
+    }
+}

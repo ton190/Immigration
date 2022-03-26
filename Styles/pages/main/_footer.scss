@@ -1,0 +1,11 @@
+@use '../../basic' as *;
+
+footer{
+    margin-top: pg(600);
+    height: 400px;
+    width: 100%;
+    background-color: clr(primary, footer);
+    background-image: url(/pics/footer.webp);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}

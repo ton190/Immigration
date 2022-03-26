@@ -1,0 +1,23 @@
+@use '../../basic' as *;
+
+.nav_menu{
+    display: none;
+    background: clr(primary, bg);
+    top: 0;
+    position: sticky;
+    z-index: 5;
+    background: clr(primary, menu_bg);
+    padding: pg(200);
+    @include mq(md){
+        display: grid;
+    }
+    nav{
+        max-width: map-get($breakpoints, bg);
+        width: 100%;
+        text-transform: uppercase;
+        justify-content: space-between;
+        justify-self: center;
+        display: flex;
+        background: clr(primary, menu_bg);
+    }
+}

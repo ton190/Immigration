@@ -1,0 +1,58 @@
+@use '../../basic' as *;
+
+.section_6{
+    h2{
+        padding: 0;
+    }
+    .prices{
+        display: grid;
+        gap: pg(400);
+
+        @include mq(md){
+            grid-auto-flow: column;
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    table{
+        border-spacing: .3em 0;
+        td{
+            padding: pg(50) pg(200);
+        }
+        tr:nth-child(1n){
+            background: clr(primary, highlight_3);
+        }
+        tr:nth-child(2n){
+            background: clr(primary, highlight_4);
+        }
+        tr:first-child{
+            background: initial;
+        }
+        th{
+            text-transform: uppercase;
+            text-align: left;
+            padding: pg(100);
+            display: grid;
+            grid-template-columns: 80px 1fr;
+            justify-content: start;
+            align-items:end ;
+        }
+        tr td:last-child{
+            width: 4em;
+            padding-left: 2em;
+        }
+        &:nth-child(4){
+            @include mq(md){
+                grid-row: span 2;
+            }
+        }
+    }
+    .worning{
+        justify-self: left;
+        align-items: center;
+        display: grid;
+        grid-auto-flow: column;
+        gap: pg(400);
+    }
+}
+

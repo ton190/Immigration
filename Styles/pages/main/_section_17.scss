@@ -1,0 +1,18 @@
+@use '../../basic' as *;
+
+.section_17{
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        gap: pg(200);
+        input[type="text"]{
+            text-align: center;
+            font-size: fs(300);
+        }
+        button{
+            padding: pg(200);
+            font-weight: bold;
+        }
+    }
+}
+

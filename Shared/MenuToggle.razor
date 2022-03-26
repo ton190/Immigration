@@ -1,0 +1,12 @@
+<div id="menu_toggle" class="@Collapsed" @onclick="AppState.ToggleMenu">
+    <div>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+
+@code{
+    [Parameter] public string? Collapsed { get; set; }
+}

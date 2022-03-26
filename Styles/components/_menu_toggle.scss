@@ -1,0 +1,59 @@
+@use '../basic/' as *;
+
+#menu_toggle{
+    z-index: 10;
+    position:fixed;
+    top: 0;
+    left: 150px;
+    padding: .8rem;
+    background: clr(menu_toggle, bg);
+    width: max-content;
+    display: grid;
+    align-content: end;
+    @include mq(md){
+        display: none;
+    }
+    div{
+        width: 1.5rem;
+        height: 1.2rem;
+        position: relative;
+        cursor: pointer;
+    }
+    span{
+        position: absolute;
+        border-radius: 0px;
+        background: clr(menu_toggle, strips);
+        height: 3px;
+        width: 100%;
+        left: 50%;
+        transition: .25s ease-in-out;
+        &:nth-child(1), &:nth-child(2){
+            top: 50%;
+            transform: translate(-50%, -50%) rotate(0deg);
+        }
+        &:nth-child(3){
+
+            top:0%;
+            transform: translate(-50%, 0%);
+        }
+        &:nth-child(4){
+            top:100%;
+            transform: translate(-50%, -100%);
+        }
+    }
+    &.open{
+        span{
+            &:nth-child(1){
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+            &:nth-child(2){
+                transform: translate(-50%, -50%) rotate(-45deg);
+            }
+            &:nth-child(3), &:nth-child(4){
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 0%;
+            }
+        }
+    }
+}

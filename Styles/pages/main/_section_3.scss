@@ -1,0 +1,26 @@
+@use '../../basic' as *;
+
+.section_3{
+    .services{
+        text-transform: uppercase;
+        max-width: 800px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: pg(200);
+        div{
+            flex-basis: auto;
+            flex: 1;
+            min-width: 230px;
+            max-width: 400px;
+            display: grid;
+            justify-items: center;
+            img{
+                max-height: 106px;
+            }
+            p{
+                white-space: nowrap;
+            }
+        }
+    }
+}

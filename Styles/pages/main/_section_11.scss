@@ -1,0 +1,43 @@
+@use '../../basic' as *;
+
+.section_11{
+    .warning{
+        margin-right: 117px;
+        max-width: 660px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: pg(200);
+        align-items: end;
+        span{
+            color: clr(primary, warning);
+        }
+        .section_title{
+            flex-basis: auto;
+            flex-grow: 1;
+            @include mq(md){
+                max-width: 500px;
+            }
+        }
+    }
+    .wrong{
+        display: flex;
+        gap: pg(400);
+        flex-wrap: wrap;
+        justify-content: center;
+        div{
+            padding: pg(200);
+            text-align: center;
+            box-shadow: clr(primary, warning_2) 0 0 5px 1px;
+            border-radius: 25px;
+            max-width: 250px;
+            display: grid;
+            justify-items: center;
+            &:nth-child(1){
+                img{
+                    padding-left: 32px;
+                }
+            }
+        }
+    }
+}
+

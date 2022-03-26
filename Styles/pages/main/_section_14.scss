@@ -1,0 +1,30 @@
+@use '../../basic' as *;
+
+.section_14{
+    .container{
+        display: flex;
+        flex-wrap: wrap-reverse;
+        gap: pg(200);
+        align-items: center;
+        justify-content: center;
+        div{
+            max-width: 400px;
+            display: grid;
+            gap: pg(400);
+            justify-items: center;
+            h4:nth-child(2){
+                text-transform: uppercase;
+                color: clr(primary, warning);
+                font-weight: bold;
+            }
+            button{
+                text-transform: uppercase;
+            }
+        }
+        img{
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+        }
+    }
+}

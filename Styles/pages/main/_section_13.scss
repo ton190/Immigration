@@ -1,0 +1,35 @@
+@use '../../basic' as *;
+
+.section_13{
+    .container{
+        width: 100%;
+        max-width: 800px;
+        display: grid;
+        div{
+            font-size: fs(300);
+            display: flex;
+            gap: pg(200);
+            align-items: center;
+            p{
+                display: grid;
+                grid-auto-flow: column;
+                align-items: center;
+                gap: pg(100);
+            }
+            span{
+                color: clr(primary, highlight_5);
+                font-weight: bold;
+                font-size: 2em;
+            }
+        }
+        div:nth-child(even){
+            @include mq(md){
+                justify-self: end;
+                flex-direction: row-reverse;
+            }
+        }
+        div:nth-child(odd){
+            justify-self: left;
+        }
+    }
+}
