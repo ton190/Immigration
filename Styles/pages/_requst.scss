@@ -1,0 +1,44 @@
+@use '../basic/' as *;
+
+.request{
+    h2, p{
+        margin: 0;
+        padding: 0;
+    }
+    button{
+        &.error{
+        background: clr(primary, warning_3);
+        }
+        &.success{
+            background: clr(primary, success);
+        }
+    }
+    border: none;
+    max-width: 400px;
+    width: fit-content;
+    padding: pg(400);
+    background: white;
+    border-radius: 25px;
+
+    display: grid;
+    gap: pg(400);
+
+    .box{
+        display: grid;
+        gap: pg(300);
+        div{
+            position: relative;
+            display: grid;
+        }
+    }
+
+    a{
+        justify-self: center;
+        text-decoration: underline;
+        cursor: pointer;
+        transition: color .1s linear;
+        &:hover{
+            color: clr(primary, highlight_1);
+        }
+    }
+}

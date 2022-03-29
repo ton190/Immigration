@@ -2,21 +2,27 @@
 
 .section_11{
     .warning{
-        margin-right: 117px;
-        max-width: 660px;
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
         gap: pg(200);
-        align-items: end;
+        justify-items: center;
         span{
             color: clr(primary, warning);
         }
         .section_title{
+            text-align: center;
             flex-basis: auto;
             flex-grow: 1;
             @include mq(md){
                 max-width: 500px;
             }
+        }
+        @include mq(md){
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: 117px;
+            max-width: 660px;
+            align-items: end;
+            margin-right: 117px;
         }
     }
     .wrong{

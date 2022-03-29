@@ -175,7 +175,7 @@
     <value>Я заявляю и беру на себя полную ответственность перед вами за:</value>
   </data>
   <data name="s2 p1" xml:space="preserve">
-    <value>- Стоимость наших услуг опубликована на сайте. Оказание услуг оформляется официальным договором, она окончательная и не изменится в процессе работы</value>
+    <value>- Стоимость наших услуг опубликована на сайте. Оказание услуг оформляется официальным договором, она окончательная и не изменится в процессе работы.</value>
   </data>
   <data name="s2 p2" xml:space="preserve">
     <value>- Полную прозрачность. Мы знаем закон и работаем легально. Будьте бдительны и работайте с проверенными компаниями.</value>
@@ -429,17 +429,13 @@
     <value>Получите {0}Kонсультацию Иммиграционного Специалиста{1} - БЕСПЛАТНО</value>
   </data>
   <data name="s10 p1.1" xml:space="preserve">
-    <value>Задайте любой вопрос напрямую в:</value>
+    <value>Задайте любой вопрос напрямую в</value>
   </data>
   <data name="s10 p1.2" xml:space="preserve">
-    <value>Или просто введите ваш телефон,
-чтобы оставить заявку</value>
+    <value>Или просто отправьте заявку, с вами скоро свяжутся</value>
   </data>
   <data name="s10 b1" xml:space="preserve">
     <value>Отправить заявку</value>
-  </data>
-  <data name="s10 p1.3" xml:space="preserve">
-    <value>Я согласен с условиями политики конфиденциальности</value>
   </data>
   <data name="s11 t2" xml:space="preserve">
     <value>Ни один лицензированный иммиграционный консультант не имеет права гарантировать 100% успех, {0}НО при этом{1}</value>
@@ -565,5 +561,293 @@
   </data>
   <data name="page title" xml:space="preserve">
     <value>Иммиграция в Канаду</value>
+  </data>
+  <data name="qe s1 t1" xml:space="preserve">
+    <value>У вас есть супруг(а)?</value>
+  </data>
+  <data name="qe s1 p1" xml:space="preserve">
+    <value>Официальный брак</value>
+  </data>
+  <data name="qe s1 p2" xml:space="preserve">
+    <value>Гражданский брак</value>
+  </data>
+  <data name="qe s1 p3" xml:space="preserve">
+    <value>Нет</value>
+  </data>
+  <data name="qe s2 t1" xml:space="preserve">
+    <value>Персональные данные</value>
+  </data>
+  <data name="qe s t1" xml:space="preserve">
+    <value>Контакты</value>
+  </data>
+  <data name="qe s t2" xml:space="preserve">
+    <value>Ваша информация</value>
+  </data>
+  <data name="qe s t3" xml:space="preserve">
+    <value>Информация о партнере</value>
+  </data>
+  <data name="qe s2 p1" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="qe s2 p2" xml:space="preserve">
+    <value>Телефон</value>
+  </data>
+  <data name="qe s2 p3" xml:space="preserve">
+    <value>Имя</value>
+  </data>
+  <data name="qe s2 p4" xml:space="preserve">
+    <value>Город и страна проживания</value>
+  </data>
+  <data name="qe s2 p5" xml:space="preserve">
+    <value>Возвраст</value>
+  </data>
+  <data name="qe s3 t1" xml:space="preserve">
+    <value>Знание иностранных языков</value>
+  </data>
+  <data name="qe s3 p1" xml:space="preserve">
+    <value>Английский</value>
+  </data>
+  <data name="qe s3 p2" xml:space="preserve">
+    <value>Французкий</value>
+  </data>
+  <data name="qe s3 p3" xml:space="preserve">
+    <value>Пройденные тесты на знания языка</value>
+  </data>
+  <data name="qe s3 o1" xml:space="preserve">
+    <value>Не знаю</value>
+  </data>
+  <data name="qe s3 o2" xml:space="preserve">
+    <value>Немного</value>
+  </data>
+  <data name="qe s3 o3" xml:space="preserve">
+    <value>Средне</value>
+  </data>
+  <data name="qe s3 o4" xml:space="preserve">
+    <value>Хорошо</value>
+  </data>
+  <data name="qe s4 t1" xml:space="preserve">
+    <value>Образование</value>
+  </data>
+  <data name="qe s4 p1" xml:space="preserve">
+    <value>Сколько лет учились в школе?</value>
+  </data>
+  <data name="qe s4 p2" xml:space="preserve">
+    <value>Высшее образование</value>
+  </data>
+  <data name="qe s4 p2 o1" xml:space="preserve">
+    <value>Нет</value>
+  </data>
+  <data name="qe s4 p2 o2" xml:space="preserve">
+    <value>Техникум</value>
+  </data>
+  <data name="qe s4 p2 o3" xml:space="preserve">
+    <value>Колледж</value>
+  </data>
+  <data name="qe s4 p2 o4" xml:space="preserve">
+    <value>Уневерситет</value>
+  </data>
+  <data name="qe s4 p2 o5" xml:space="preserve">
+    <value>Постдипломная программа</value>
+  </data>
+  <data name="qe s4 p3" xml:space="preserve">
+    <value>Сколько лет получали высшее образование?</value>
+  </data>
+  <data name="qe s4 p4" xml:space="preserve">
+    <value>Профессия</value>
+  </data>
+  <data name="qe s5 t1" xml:space="preserve">
+    <value>Опыт работы</value>
+  </data>
+  <data name="qe s5 p1" xml:space="preserve">
+    <value>Профессия</value>
+  </data>
+  <data name="qe s5 p2" xml:space="preserve">
+    <value>Количество лет стажа</value>
+  </data>
+  <data name="qe b1" xml:space="preserve">
+    <value>Добавить</value>
+  </data>
+  <data name="qe b2" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="qe b3" xml:space="preserve">
+    <value>Отправить</value>
+  </data>
+  <data name="qe s6 t1" xml:space="preserve">
+    <value>Что из перечисленного относится к вашему случаю?</value>
+  </data>
+  <data name="qe s6 p1" xml:space="preserve">
+    <value>Вы находитесь в Канаде</value>
+  </data>
+  <data name="qe s6 p2" xml:space="preserve">
+    <value>Вы подавали заявление на иммиграцию в Канаду</value>
+  </data>
+  <data name="qe s6 p3" xml:space="preserve">
+    <value>Работодатель в Канаде предложил вам работу</value>
+  </data>
+  <data name="qe s6 p4" xml:space="preserve">
+    <value>У вас имеется судимость</value>
+  </data>
+  <data name="qe s6 p5" xml:space="preserve">
+    <value>Вы обращались ранее в какие-либо компании или каким-либо канадским адвокатам</value>
+  </data>
+  <data name="qe s6 p6" xml:space="preserve">
+    <value>Ваши близкие родственники постоянно проживают в Канаде</value>
+  </data>
+  <data name="qe s6 p7" xml:space="preserve">
+    <value>Вам отказывали в канадской визе или в иммиграции в Канаду</value>
+  </data>
+  <data name="qe s6 p8" xml:space="preserve">
+    <value>Вы планируете получать образование в Канаде</value>
+  </data>
+  <data name="qe s6 p9" xml:space="preserve">
+    <value>У вас, или вашей семьи имеются существенные сложности медицинского характера</value>
+  </data>
+  <data name="qe s6 p10" xml:space="preserve">
+    <value>Вы скорее всего планируете получать высшее образование в Канаде</value>
+  </data>
+  <data name="qe e1" xml:space="preserve">
+    <value>Поле не может быть пустым</value>
+  </data>
+  <data name="qe e2" xml:space="preserve">
+    <value>Не правильный формат поля</value>
+  </data>
+  <data name="qe e3" xml:space="preserve">
+    <value>Поле не может быть короче двух символов</value>
+  </data>
+  <data name="qe e4" xml:space="preserve">
+    <value>Я не думаю что вам больше ста лет</value>
+  </data>
+  <data name="qe m1" xml:space="preserve">
+    <value>Произошла ошибка в заполнении формы. Пожалуйста проверьте форму</value>
+  </data>
+  <data name="qe m2" xml:space="preserve">
+    <value>Форма была успешно отправлена</value>
+  </data>
+  <data name="qe m3" xml:space="preserve">
+    <value>Отсылаю</value>
+  </data>
+  <data name="qe b4" xml:space="preserve">
+    <value>Назад на главную</value>
+  </data>
+  <data name="f t1" xml:space="preserve">
+    <value>Контакты</value>
+  </data>
+  <data name="f t2" xml:space="preserve">
+    <value>Карта сайта</value>
+  </data>
+  <data name="f p1" xml:space="preserve">
+    <value>Офис в Торонто</value>
+  </data>
+  <data name="f p2" xml:space="preserve">
+    <value>Телефон</value>
+  </data>
+  <data name="f p3" xml:space="preserve">
+    <value>Задать вопрос в сети</value>
+  </data>
+  <data name="f l1" xml:space="preserve">
+    <value>О нас</value>
+  </data>
+  <data name="s10 p1.3" xml:space="preserve">
+    <value>Заполните анкету для оценки ваших шансов</value>
+  </data>
+  <data name="s10 b2" xml:space="preserve">
+    <value>Заполнить анкету</value>
+  </data>
+  <data name="p b1" xml:space="preserve">
+    <value>Заказать</value>
+  </data>
+  <data name="p b2" xml:space="preserve">
+    <value>Закрыть</value>
+  </data>
+  <data name="s7 t1" xml:space="preserve">
+    <value>Последовательность нашей работы</value>
+  </data>
+  <data name="s7 t2" xml:space="preserve">
+    <value>Решили иммигрировать</value>
+  </data>
+  <data name="s7 t3" xml:space="preserve">
+    <value>Обращение в нашу компанию, бесплатная консультация</value>
+  </data>
+  <data name="s7 t4" xml:space="preserve">
+    <value>Оценка возможностей, разработка плана действий</value>
+  </data>
+  <data name="s7 t5" xml:space="preserve">
+    <value>Предварительный сбор документов</value>
+  </data>
+  <data name="s7 t6" xml:space="preserve">
+    <value>Регистрация в соответствующей программе</value>
+  </data>
+  <data name="s7 t7" xml:space="preserve">
+    <value>Оформление пакета документов для подачи</value>
+  </data>
+  <data name="s7 t8" xml:space="preserve">
+    <value>Помогаем с адаптацией</value>
+  </data>
+  <data name="s7 p1.1" xml:space="preserve">
+    <value>Вы принимаете решение иммигрировать или оценить ваши возможности на иммиграцию или получения визы.</value>
+  </data>
+  <data name="s7 p2.1" xml:space="preserve">
+    <value>Вы получите консультацию где иммиграционный консультант оценит Ваши шансы исходя из минимума требований для иммиграции из предоставленной информации.</value>
+  </data>
+  <data name="s7 p2.2" xml:space="preserve">
+    <value>Сориентируем Вас по необходимым документам, стоимости и срокам.</value>
+  </data>
+  <data name="s7 p2.3" xml:space="preserve">
+    <value>Отвечаем на ваши вопросы.</value>
+  </data>
+  <data name="s7 p3.1" xml:space="preserve">
+    <value>Оцениваем риски и прорабатываем возможности увеличения шансов иммиграции(получения документов).</value>
+  </data>
+  <data name="s7 p3.2" xml:space="preserve">
+    <value>Разрабатываем Ваш детальный план иммиграции.</value>
+  </data>
+  <data name="s7 p3.3" xml:space="preserve">
+    <value>Предоставляем точную стоимость по расходам.</value>
+  </data>
+  <data name="s7 p3.4" xml:space="preserve">
+    <value>Отвечаем на ваши вопросы.</value>
+  </data>
+  <data name="s7 p4.1" xml:space="preserve">
+    <value>Подписываем с вами договор о сотрудничестве.</value>
+  </data>
+  <data name="s7 p4.2" xml:space="preserve">
+    <value>Подготавливаем список документов для подачи.</value>
+  </data>
+  <data name="s7 p4.3" xml:space="preserve">
+    <value>Помогаем с переводом и заверением документов.</value>
+  </data>
+  <data name="s7 p4.4" xml:space="preserve">
+    <value>Отвечаем на ваши вопросы.</value>
+  </data>
+  <data name="s7 p5.1" xml:space="preserve">
+    <value>Анализируем профильные/федеральные программы.</value>
+  </data>
+  <data name="s7 p5.2" xml:space="preserve">
+    <value>Регистрируем и активируем Ваш иммиграционный профайл.</value>
+  </data>
+  <data name="s7 p5.3" xml:space="preserve">
+    <value>Записываем Вас на подходящую иммиграционную программу.</value>
+  </data>
+  <data name="s7 p5.4" xml:space="preserve">
+    <value>Подготавливаем с вами документы.</value>
+  </data>
+  <data name="s7 p6.1" xml:space="preserve">
+    <value>Проверяем и подаем полный пакет документов.</value>
+  </data>
+  <data name="s7 p6.2" xml:space="preserve">
+    <value>Пишем сопроводительные письма.</value>
+  </data>
+  <data name="s7 p7.1" xml:space="preserve">
+    <value>Помогаем посчитать стоимость проживания на первое время.</value>
+  </data>
+  <data name="s7 p7.2" xml:space="preserve">
+    <value>Помогаем с поиском и снятия жилья.</value>
+  </data>
+  <data name="s7 p7.3" xml:space="preserve">
+    <value>Помогаем в поиске работы, оформления детей в школы и садики.</value>
+  </data>
+  <data name="s7 p7.4" xml:space="preserve">
+    <value>Информируем о программах переобучения, социальной поддержки и прочее.</value>
   </data>
 </root>

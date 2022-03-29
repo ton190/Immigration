@@ -9,3 +9,6 @@ function scrollIntoView(elementId) {
     // window.location.hash = elementId;
   }
 }
+function scrollToEnd() {
+window.scrollTo(0, document.body.scrollHeight);
+}

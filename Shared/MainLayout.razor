@@ -2,8 +2,27 @@
 
 <PageTitle>Immigration Canada</PageTitle>
 
+<div class="light_bg @AppState.LightBgClass"></div>
 <div class="page">
     <main>
         @Body
     </main>
 </div>
+
+@code{
+    protected override void OnInitialized()
+    {
+        AppState.OnChange += StateHasChanged;
+    }
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        if(!firstRender) return;
+        AppState.CloseBg();
+    }
+
+    public void Dispose()
+    {
+        AppState.OnChange -= StateHasChanged;
+    }
+}

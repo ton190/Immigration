@@ -1,11 +1,105 @@
 @use '../../basic' as *;
 
 footer{
-    margin-top: pg(600);
-    height: 400px;
-    width: 100%;
+    position: relative;
+    &:before{
+        z-index: -1;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url("/pics/footer.webp");
+        background-position: center bottom;
+        background-repeat: no-repeat;
+    }
     background-color: clr(primary, footer);
-    background-image: url(/pics/footer.webp);
     background-position: center bottom;
     background-repeat: no-repeat;
+
+    margin-top: pg(600);
+    padding: pg(400) pg(200);
+
+    display: flex;
+    gap: pg(400);
+    justify-content: center;
+    flex-direction: column;
+
+    color: white;
+    // text-shadow: black 0px 0px 5px;
+    @include mq(sm){
+        flex-direction: row;
+        gap: pg(600);
+    }
+    h4{
+        text-transform: uppercase;
+    }
+
+    .contacts{
+        border-bottom: 1px solid white;
+        padding-bottom: pg(400);
+        flex-shrink: 0;
+        display: grid;
+        align-content: start;
+        gap: pg(200);
+
+        @include mq(sm){
+            border-bottom: none;
+            padding-bottom: 0;
+
+        }
+
+        h5{
+            text-decoration: underline;
+        }
+        h4, p{
+            margin: 0;
+        }
+        .container{
+            display: grid;
+            gap: pg(200);
+        }
+        .box{
+            display: grid;
+            gap: pg(50);
+            div{
+                display: flex;
+                align-items: center;
+                justify-items: center;
+                gap: pg(100);
+                img{
+                    cursor: pointer;
+                    &:hover{
+                        mix-blend-mode: exclusion;
+                    }
+                }
+            }
+        }
+    }
+
+    .navigation{
+        display: grid;
+        gap: pg(200);
+        align-content: start;
+        .box{
+            display: grid;
+            gap: pg(100) pg(400);
+            @include mq(md){
+                grid-auto-flow: column;
+                grid-template-rows: repeat(7, min-content);
+                grid-template-columns: repeat(2, minmax(min-content, max-content));
+                // grid-auto-rows: auto;
+            }
+        }
+        a{
+            color: white;
+            cursor: pointer;
+            transition: color .1s ease;
+            text-decoration: underline;
+            &:hover{
+                mix-blend-mode: exclusion;
+            }
+        }
+    }
 }

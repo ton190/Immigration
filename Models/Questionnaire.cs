@@ -21,7 +21,7 @@ public class Questionnaire
     public bool FamilyInCanada { get; set; }
     public bool AppliedInCanada { get; set; }
     public bool DeniedInCanada { get; set; }
-    public bool JobOffer { get; set; }
+    public bool JobOffered { get; set; }
     public bool GonnaStudy { get; set; }
     public bool CriminalRecord { get; set; }
     public bool MedicalProblems { get; set; }
@@ -45,14 +45,14 @@ public class LanguageSkills
 
 public class Education
 {
-    public int SchoolYears { get; set; }
+    public double SchoolYears { get; set; }
     public int Collage { get; set; }
-    public int CollageYears { get; set; }
+    public double CollageYears { get; set; }
     public string? Profession { get; set; }
 }
 
 public class WorkExperience
 {
     public string? Profession { get; set; }
-    public int? Experience { get; set; }
+    public double Experience { get; set; }
 }

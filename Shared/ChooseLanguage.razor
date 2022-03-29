@@ -21,7 +21,7 @@
             .GetChildren().ToDictionary(x => x.Key, x=> x.Value);
     }
 
-    private void RequestCultureChange(string selectedCulture)
+    private async void RequestCultureChange(string selectedCulture)
     {
         if(string.IsNullOrWhiteSpace(selectedCulture)) return;
 
@@ -31,6 +31,8 @@
         var query = $"?culture={Uri.EscapeDataString(selectedCulture)}&" +
             $"redirectUri={Uri.EscapeDataString(uri)}";
 
+        AppState.OpenBg();
+        await Task.Delay(300);
         NavigationManager.NavigateTo("/Culture/SetCulture" + query, forceLoad: true);
     }
 }

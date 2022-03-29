@@ -12,6 +12,9 @@
         }
         .box{
             p{
+                display: grid;
+                grid-template-columns: min-content 1fr;
+                align-items: center;
                 &:before{
                     content: '✔';
                     color: clr(primary, highlight_1) ;

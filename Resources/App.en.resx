@@ -133,7 +133,7 @@
     <value>Why Canada</value>
   </data>
   <data name="m b6" xml:space="preserve">
-    <value>Questions</value>
+    <value>FAQ</value>
   </data>
   <data name="h p3" xml:space="preserve">
     <value>Call, we are working now{0}
@@ -429,17 +429,13 @@ immigration programs, there are a few general requirements for documents</value>
     <value>Get {0}Immigration Specialist Advice{1} - FREE</value>
   </data>
   <data name="s10 p1.1" xml:space="preserve">
-    <value>Ask any question directly at:</value>
+    <value>Ask any question directly at</value>
   </data>
   <data name="s10 p1.2" xml:space="preserve">
-    <value>Or just enter your phone,
-to apply</value>
+    <value>Or just send a request, you will be contacted shortly</value>
   </data>
   <data name="s10 b1" xml:space="preserve">
     <value>Submit a request</value>
-  </data>
-  <data name="s10 p1.3" xml:space="preserve">
-    <value>I agree with the terms of the privacy policy</value>
   </data>
   <data name="s11 t1" xml:space="preserve">
     <value>Be careful</value>
@@ -564,5 +560,293 @@ or not you have relevant education.</value>
   </data>
   <data name="page title" xml:space="preserve">
     <value>Immigration in to Canada</value>
+  </data>
+  <data name="qe s1 t1" xml:space="preserve">
+    <value>Do you have a spouse?</value>
+  </data>
+  <data name="qe s1 p1" xml:space="preserve">
+    <value>Official marriage</value>
+  </data>
+  <data name="qe s1 p2" xml:space="preserve">
+    <value>Civil marriage</value>
+  </data>
+  <data name="qe s1 p3" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="qe s2 t1" xml:space="preserve">
+    <value>Personal information</value>
+  </data>
+  <data name="qe s t1" xml:space="preserve">
+    <value>Contacts</value>
+  </data>
+  <data name="qe s t2" xml:space="preserve">
+    <value>Your information</value>
+  </data>
+  <data name="qe s t3" xml:space="preserve">
+    <value>Partner information</value>
+  </data>
+  <data name="qe s2 p1" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="qe s2 p2" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="qe s2 p3" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="qe s2 p4" xml:space="preserve">
+    <value>City and country of residence</value>
+  </data>
+  <data name="qe s2 p5" xml:space="preserve">
+    <value>Age</value>
+  </data>
+  <data name="qe s3 t1" xml:space="preserve">
+    <value>Language skills</value>
+  </data>
+  <data name="qe s3 p1" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="qe s3 p2" xml:space="preserve">
+    <value>Franch</value>
+  </data>
+  <data name="qe s3 p3" xml:space="preserve">
+    <value>Passed language tests</value>
+  </data>
+  <data name="qe s3 o1" xml:space="preserve">
+    <value>Do not know</value>
+  </data>
+  <data name="qe s3 o2" xml:space="preserve">
+    <value>A little</value>
+  </data>
+  <data name="qe s3 o3" xml:space="preserve">
+    <value>Average</value>
+  </data>
+  <data name="qe s3 o4" xml:space="preserve">
+    <value>Good</value>
+  </data>
+  <data name="qe s4 t1" xml:space="preserve">
+    <value>Education</value>
+  </data>
+  <data name="qe s4 p1" xml:space="preserve">
+    <value>How many years have you been in school?</value>
+  </data>
+  <data name="qe s4 p2" xml:space="preserve">
+    <value>Higher education</value>
+  </data>
+  <data name="qe s4 p2 o1" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="qe s4 p2 o2" xml:space="preserve">
+    <value>Undergraduate</value>
+  </data>
+  <data name="qe s4 p2 o3" xml:space="preserve">
+    <value>Collage</value>
+  </data>
+  <data name="qe s4 p2 o4" xml:space="preserve">
+    <value>University</value>
+  </data>
+  <data name="qe s4 p2 o5" xml:space="preserve">
+    <value>Master</value>
+  </data>
+  <data name="qe s4 p3" xml:space="preserve">
+    <value>How many years did you study for higher education?</value>
+  </data>
+  <data name="qe s4 p4" xml:space="preserve">
+    <value>Profession</value>
+  </data>
+  <data name="qe s5 t1" xml:space="preserve">
+    <value>Work experience</value>
+  </data>
+  <data name="qe s5 p1" xml:space="preserve">
+    <value>Profession</value>
+  </data>
+  <data name="qe s5 p2" xml:space="preserve">
+    <value>Number of years of experience</value>
+  </data>
+  <data name="qe b1" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="qe b2" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="qe b3" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="qe s6 t1" xml:space="preserve">
+    <value>Which of the following applies to your case?</value>
+  </data>
+  <data name="qe s6 p1" xml:space="preserve">
+    <value>You are in Canada</value>
+  </data>
+  <data name="qe s6 p2" xml:space="preserve">
+    <value>You applied to immigrate to Canada</value>
+  </data>
+  <data name="qe s6 p3" xml:space="preserve">
+    <value>An employer in Canada offered you a job</value>
+  </data>
+  <data name="qe s6 p4" xml:space="preserve">
+    <value>You have a criminal record</value>
+  </data>
+  <data name="qe s6 p5" xml:space="preserve">
+    <value>You have previously contacted any companies or any Canadian lawyers</value>
+  </data>
+  <data name="qe s6 p6" xml:space="preserve">
+    <value>Your close relatives are permanent residents of Canada</value>
+  </data>
+  <data name="qe s6 p7" xml:space="preserve">
+    <value>You were denied a Canadian visa or immigration to Canada</value>
+  </data>
+  <data name="qe s6 p8" xml:space="preserve">
+    <value>You planning to study in Canada</value>
+  </data>
+  <data name="qe s6 p9" xml:space="preserve">
+    <value>You or your family have significant medical problems</value>
+  </data>
+  <data name="qe s6 p10" xml:space="preserve">
+    <value>You planning on pursuing higher education in Canada</value>
+  </data>
+  <data name="qe e1" xml:space="preserve">
+    <value>The field cannot be empty</value>
+  </data>
+  <data name="qe e2" xml:space="preserve">
+    <value>Incorrect format of the filed</value>
+  </data>
+  <data name="qe e3" xml:space="preserve">
+    <value>The field cannot be shorter than two characters</value>
+  </data>
+  <data name="qe e4" xml:space="preserve">
+    <value>I don't think you're over a hundred years old</value>
+  </data>
+  <data name="qe m1" xml:space="preserve">
+    <value>An error occurred while filling out the form. Please check the form</value>
+  </data>
+  <data name="qe m2" xml:space="preserve">
+    <value>The form was successfully submitted</value>
+  </data>
+  <data name="qe m3" xml:space="preserve">
+    <value>Sending</value>
+  </data>
+  <data name="qe b4" xml:space="preserve">
+    <value>Back to home page</value>
+  </data>
+  <data name="f t1" xml:space="preserve">
+    <value>Contacts</value>
+  </data>
+  <data name="f t2" xml:space="preserve">
+    <value>Site map</value>
+  </data>
+  <data name="f p1" xml:space="preserve">
+    <value>Toronto office</value>
+  </data>
+  <data name="f p2" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="f p3" xml:space="preserve">
+    <value>Ask question online</value>
+  </data>
+  <data name="f l1" xml:space="preserve">
+    <value>About Us</value>
+  </data>
+  <data name="s10 p1.3" xml:space="preserve">
+    <value>Fill out the questionnaire to assess your chances</value>
+  </data>
+  <data name="s10 b2" xml:space="preserve">
+    <value>Fill out the form</value>
+  </data>
+  <data name="p b1" xml:space="preserve">
+    <value>Order</value>
+  </data>
+  <data name="p b2" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="s7 t1" xml:space="preserve">
+    <value>The sequence of our work</value>
+  </data>
+  <data name="s7 t2" xml:space="preserve">
+    <value>Decided to immigrate</value>
+  </data>
+  <data name="s7 t3" xml:space="preserve">
+    <value>Contact our company, free consultation</value>
+  </data>
+  <data name="s7 t4" xml:space="preserve">
+    <value>Opportunity assessment, action plan development</value>
+  </data>
+  <data name="s7 t5" xml:space="preserve">
+    <value>Preliminary collection of documents</value>
+  </data>
+  <data name="s7 t6" xml:space="preserve">
+    <value>Enrollment in the relevant program</value>
+  </data>
+  <data name="s7 t7" xml:space="preserve">
+    <value>Enrollment in the relevant program</value>
+  </data>
+  <data name="s7 t8" xml:space="preserve">
+    <value>Help with adaptation</value>
+  </data>
+  <data name="s7 p1.1" xml:space="preserve">
+    <value>You make a decision to immigrate or evaluate your immigration or visa options.</value>
+  </data>
+  <data name="s7 p2.1" xml:space="preserve">
+    <value>You will receive a consultation where an immigration consultant will assess your chances based on the minimum requirements for immigration from the information provided.</value>
+  </data>
+  <data name="s7 p2.2" xml:space="preserve">
+    <value>We will guide you on the necessary documents, cost and terms.</value>
+  </data>
+  <data name="s7 p2.3" xml:space="preserve">
+    <value>We answer your questions.</value>
+  </data>
+  <data name="s7 p3.1" xml:space="preserve">
+    <value>We assess the risks and work out the possibilities of increasing the chances of immigration (obtaining documents).</value>
+  </data>
+  <data name="s7 p3.2" xml:space="preserve">
+    <value>We develop your detailed immigration plan.</value>
+  </data>
+  <data name="s7 p3.3" xml:space="preserve">
+    <value>We provide accurate cost estimates.</value>
+  </data>
+  <data name="s7 p3.4" xml:space="preserve">
+    <value>We answer your questions.</value>
+  </data>
+  <data name="s7 p4.1" xml:space="preserve">
+    <value>We sign a cooperation agreement with you.</value>
+  </data>
+  <data name="s7 p4.2" xml:space="preserve">
+    <value>We prepare a list of documents for submission.</value>
+  </data>
+  <data name="s7 p4.3" xml:space="preserve">
+    <value>We help with the translation and certification of documents.</value>
+  </data>
+  <data name="s7 p4.4" xml:space="preserve">
+    <value>We answer your questions.</value>
+  </data>
+  <data name="s7 p5.1" xml:space="preserve">
+    <value>We analyze profile/federal programs.</value>
+  </data>
+  <data name="s7 p5.2" xml:space="preserve">
+    <value>We register and activate your immigration profile.</value>
+  </data>
+  <data name="s7 p5.3" xml:space="preserve">
+    <value>We enroll you in a suitable immigration program.</value>
+  </data>
+  <data name="s7 p5.4" xml:space="preserve">
+    <value>We prepare documents with you.</value>
+  </data>
+  <data name="s7 p6.1" xml:space="preserve">
+    <value>We check and submit a full package of documents.</value>
+  </data>
+  <data name="s7 p6.2" xml:space="preserve">
+    <value>We write cover letters.</value>
+  </data>
+  <data name="s7 p7.1" xml:space="preserve">
+    <value>We help to calculate the cost of living for the first time.</value>
+  </data>
+  <data name="s7 p7.2" xml:space="preserve">
+    <value>We help with finding and renting housing.</value>
+  </data>
+  <data name="s7 p7.3" xml:space="preserve">
+    <value>We help in finding a job, registration of children in schools and kindergartens.</value>
+  </data>
+  <data name="s7 p7.4" xml:space="preserve">
+    <value>We inform about programs of retraining, social support and so on.</value>
   </data>
 </root>

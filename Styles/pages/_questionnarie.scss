@@ -1,0 +1,148 @@
+@use '../basic' as *;
+.chance{
+    display: flex;
+    justify-content: center;
+    form{
+        flex-shrink: 0;
+        max-width: 850px;
+        width:100%;
+        display: grid;
+        gap: pg(200);
+        padding-bottom: pg(200);
+    }
+    button{
+        padding: pg(200) pg(400);
+        margin-top: 0;
+        font-size: fs(200);
+        transition: background .3s linear;
+        &.error{
+        background: clr(primary, warning_3);
+        }
+        &.success{
+            background: clr(primary, success);
+        }
+    }
+    .button_div{
+        margin: pg(200);
+        display: grid;
+        gap:pg(200);
+        a{
+            text-align: center;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+    h2{
+        margin: 0 pg(200);
+        margin-top: pg(300);
+        text-align: center;
+    }
+    .jobs_action{
+        width: 100%;
+        display: flex;
+        gap: pg(200);
+        margin: 0 pg(200);
+        a{
+            text-decoration: underline;
+            cursor: pointer;
+            transition: color .1s linear;
+            &:hover{
+                color: clr(primary, highlight_1);
+            }
+        }
+    }
+    fieldset{
+        padding: pg(200);
+        gap: pg(200);
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+    legend{
+        font-weight: bold;
+    }
+    fieldset.spouse{
+        display: flex;
+        flex-wrap: wrap;
+        // align-items: center;
+        margin: pg(200);
+    }
+    .container_set{
+        display: grid;
+        border: none;
+        > legend{
+            font-size: fs(400);
+        }
+    }
+    .box{
+        display: flex;
+        flex-direction: column;
+        gap: pg(200);
+        &:not(.m_0)
+        {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+    .q_box{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 1fr);
+        @include mq(sm){
+        grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+        }
+        grid-auto-rows: auto;
+        gap: pg(200);
+        div{
+            padding: pg(200);
+            display: flex;
+            gap: pg(50);
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            align-items: center;
+        }
+    }
+    .info_set{
+        @include mq(sm){
+            min-width: 300px;
+        }
+        flex-grow: 1;
+        display: grid;
+        gap: pg(300);
+        align-items: start;
+        align-content: start;
+        div{
+            position: relative;
+            display: grid;
+            gap: pg(50);
+        }
+    }
+
+}
+    .validation-message{
+        position: absolute !important;
+        bottom: -1.2em;
+        left: 0;
+        color: clr(primary, warning);
+        font-style: italic;
+        font-size: fs(100);
+        padding: 0 pg(200);
+    }
+    input[type="text"], input[type="number"], select{
+        font-size: fs(200);
+        padding: pg(50);
+        border: none;
+        outline: none;
+        margin: 5px;
+        transition: box-shadow .2s linear;
+        box-shadow: clr(primary, box_shadow_input) 0px 0px 5px;
+        &:focus{
+            box-shadow: clr(primary, box_shadow_input) 0px 0px 5px 2px;
+        }
+    }
+    input{
+        &.invalid{
+            box-shadow: clr(primary, box_shadow_input_error) 0px 0px 5px;
+            &:focus{
+                box-shadow: clr(primary, box_shadow_input_error) 0px 0px 5px 2px;
+            }
+        }
+    }

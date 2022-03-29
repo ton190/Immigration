@@ -1,4 +1,4 @@
-<section class="section_10">
+<section class="section_10" id="s10">
     <div class="section_title">
         <h2>@Localizer["s10 t1"]</h2>
         <h4>
@@ -10,33 +10,24 @@
             <div>
                 <p>@Localizer["s10 p1.1"]</p>
                 <div class="icons">
-                    <div>
-                        <img src="pics/whatsup.webp">
-                        <div>What's Up</div>
-                    </div>
-                    <div>
-                        <img src="pics/viber.webp">
-                        <div>Viber</div>
-                    </div>
-                    <div>
-                        <img src="pics/telegram.webp">
-                        <div>Telegram</div>
-                    </div>
-                    <div>
-                        <img src="pics/fb.webp">
-                        <div>Facebook</div>
-                    </div>
-                    <div>
-                        <img src="pics/vk.webp">
-                        <div>VK</div>
-                    </div>
+                    <img src="pics/whatsup.webp">
+                    <img src="pics/viber.webp">
+                    <img src="pics/telegram.webp">
+                    <img src="pics/fb.webp">
+                    <img src="pics/vk.webp">
                 </div>
             </div>
             <div>
+                <p>@Localizer["s10 p1.3"]</p>
+                <button @onclick="@(()=>Navigation.NavigateTo("/questionaire"))" class="btn-2 btn-a1">
+                    @Localizer["s10 b2"]
+                </button>
+            </div>
+            <div>
                 <p>@Localizer["s10 p1.2"]</p>
-                <input type="text">
-                <button class="btn-2">@Localizer["s10 b1"]</button>
-                <p><input type="checkbox"> @Localizer["s10 p1.3"]</p>
+                <button @onclick="AppState.OpenPopup" class="btn-2 btn-a1">
+                    @Localizer["s8 b1"]
+            </button>
             </div>
         </div>
         <img class="img1" src="pics/support.webp">

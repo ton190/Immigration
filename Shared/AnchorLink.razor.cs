@@ -42,13 +42,21 @@ namespace Immigration.Shared
         {
             if (!string.IsNullOrEmpty(targetId))
             {
+                if(AppState.MenuCollapsed)
+                {
+                    AppState.CloseMenu();
+                    await Task.Delay(300);
+                }
                 AppState.CloseMenu();
+                AppState.OpenBg();
+                await Task.Delay(300);
                 // If the target ID has been specified, we know this is an anchor link that we need to scroll
                 // to, so we call the JavaScript method to take care of this for us.
                 await JSRuntime.InvokeVoidAsync(
                     "scrollIntoView",
                     targetId
                 );
+                AppState.CloseBg();
             }
         }
     }

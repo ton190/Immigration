@@ -1,8 +1,11 @@
+using System.Reflection;
 using System.Text.Encodings.Web;
 using System.Text.Unicode;
+using FluentValidation;
 using Microsoft.Extensions.WebEncoders;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 builder.Services.AddControllers();
 builder.Services.AddLocalization(opt => opt.ResourcesPath = "Resources");
 builder.Services.AddRazorPages();
@@ -10,6 +13,7 @@ builder.Services.AddServerSideBlazor();
 builder.Services.Configure<WebEncoderOptions>(opt =>
     opt.TextEncoderSettings = new TextEncoderSettings(UnicodeRanges.All));
 builder.Services.AddScoped<AppState>();
+builder.Services.AddScoped<PageNavigation>();
 
 RequestLocalizationOptions GetLocalizationOptions()
 {

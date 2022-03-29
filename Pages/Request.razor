@@ -1,0 +1,76 @@
+<EditForm Model="Model" OnValidSubmit="@OnValidSubmit" OnInvalidSubmit="InvalidForm" @oninput="ClearError">
+    <fieldset class="request" disabled="@disabled">
+    <FluentValidationValidator />
+    <h2>@Localizer["s8 b1"]</h2>
+    <div class="box">
+        <div>
+            <label for="name">@Localizer["qe s2 p3"]</label>
+            <InputText @bind-Value="Model.Name" type="text" id="name"/>
+            <ValidationMessage For="@(() => Model.Name)"/>
+        </div>
+        <div>
+            <label for="email">@Localizer["qe s2 p1"]</label>
+            <InputText @bind-Value="Model.Email" type="text" id="email"/>
+            <ValidationMessage For="@(() => Model.Email)"/>
+        </div>
+        <div>
+            <label for="phone">@Localizer["qe s2 p2"]</label>
+            <InputText @bind-Value="Model.Phone" type="text" id="phone"/>
+            <ValidationMessage For="@(() => Model.Phone)"/>
+        </div>
+    </div>
+    <button type="submit" class="btn-2 @GetButtonClass()">
+            @switch(status)
+            {
+                case 2:
+                    @Localizer["qe m2"];
+                    break;
+                case 3:
+                    @Localizer["qe m3"];
+                    break;
+                default:
+                    @Localizer["p b1"]
+                    break;
+
+            }
+    </button>
+    <a @onclick="Close">@Localizer["p b2"]</a>
+</fieldset>
+</EditForm>
+
+@code{
+    private RequestModel Model = new();
+    int status;
+    string? disabled => status > 1 ? "disabled" : null;
+    string? GetButtonClass()
+    {
+        switch (status)
+        {
+            case 1: return "error";
+            case 2: return "success";
+            case 3: return "working";
+            default: return null;
+        }
+    }
+
+    private async void OnValidSubmit()
+    {
+        if(status > 1) return;
+
+        status = 3;
+        await Task.Delay(1500);
+        status = 2;
+        StateHasChanged();
+    }
+    void InvalidForm() => status = 1;
+    void ClearError() => status = 0;
+
+    private async void Close()
+    {
+        AppState.ClosePopup();
+        await Task.Delay(300);
+        Model = new();
+        status = 0;
+        StateHasChanged();
+    }
+}

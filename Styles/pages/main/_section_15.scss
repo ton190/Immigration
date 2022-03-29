@@ -6,12 +6,22 @@
         flex-wrap: wrap;
         gap: pg(200);
         justify-content: center;
-        div{
+        a{
             width:100px;
             height: 100px;
             display: grid;
             justify-items: center;
             align-items: center;
+            cursor: pointer;
+            &:hover{
+                img{
+                    filter: brightness(120%);
+                    transform: scale(1.1);
+                }
+            }
+            img{
+                transition: all .3s ease;
+            }
         }
     }
 }

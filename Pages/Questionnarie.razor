@@ -1,0 +1,381 @@
+@page "/questionaire"
+<div class="chance">
+    <EditForm Model="Model" OnValidSubmit="@SubmitValidForm" OnInvalidSubmit="InvalidForm" @oninput="ClearError">
+        <h2>@Localizer["h p2"]</h2>
+        <FluentValidationValidator />
+        @* <ValidationSummary /> *@
+        <fieldset class="spouse" disabled="@disabled">
+            <legend>@Localizer["qe s1 t1"]</legend>
+            <InputRadioGroup @bind-Value="Model.MarriageStatus">
+            <div>
+                <InputRadio Value=2 Id="spouse_0"/>
+                <label for="spouse_0">@Localizer["qe s1 p1"]</label>
+            </div>
+            <div>
+                <InputRadio Value=1 Id="spouse_1"/>
+                <label for="spouse_1">@Localizer["qe s1 p2"]</label>
+            </div>
+            <div>
+                <InputRadio Value=0 Id="spouse_2"/>
+                <label for="spouse_2">@Localizer["qe s1 p3"]</label>
+            </div>
+            </InputRadioGroup>
+        </fieldset>
+        <fieldset class="container_set" disabled="@disabled">
+            <legend>@Localizer["qe s2 t1"]</legend>
+            <fieldset class="info_set">
+                <legend>@Localizer["qe s t1"]</legend>
+                <div>
+                    <label for="email">@Localizer["qe s2 p1"]</label>
+                    <InputText type="text" @bind-Value="Model.Email" id="email"/>
+                    <ValidationMessage For="@(() => Model.Email)"/>
+                </div>
+                <div>
+                    <label for="phone">@Localizer["qe s2 p2"]</label>
+                    <InputText type="text" @bind-Value="Model.Phone" id="phone"/>
+                <ValidationMessage For="@(() => Model.Phone)"/>
+                </div>
+            </fieldset>
+            <div class="box">
+                <fieldset class="info_set">
+                    <legend>@Localizer["qe s t2"]</legend>
+                    <div>
+                        <label for="name">@Localizer["qe s2 p3"]</label>
+                        <InputText type="text" @bind-Value="Model.PersonalInformation.Name" id="name"/>
+                        <ValidationMessage For="@(() => Model.PersonalInformation.Name)"/>
+                    </div>
+                    <div>
+                        <label for="current_address">@Localizer["qe s2 p4"]</label>
+                        <InputText type="text" @bind-Value="Model.PersonalInformation.Address" id="current_address"/>
+                        <ValidationMessage For="@(() => Model.PersonalInformation.Address)"/>
+                    </div>
+                    <div>
+                        <label for="age">@Localizer["qe s2 p5"]</label>
+                        <InputNumber type="number" min="0" @bind-Value="Model.PersonalInformation.Age" id="age"/>
+                        <ValidationMessage For="@(() => Model.PersonalInformation.Age)"/>
+                    </div>
+                </fieldset>
+                @if(Model.MarriageStatus != 0)
+                {
+                <fieldset class="info_set">
+                    <legend>@Localizer["qe s t3"]</legend>
+                    <div>
+                        <label for="spouse_name">@Localizer["qe s2 p3"]</label>
+                        <InputText type="text" @bind-Value="Model.SpousePersonalInformation.Name" id="spouse_name"/>
+                        <ValidationMessage For="@(() => Model.SpousePersonalInformation.Name)"/>
+                    </div>
+                    <div>
+                        <label for="spouse_current_address">@Localizer["qe s2 p4"]</label>
+                        <InputText type="text" @bind-Value="Model.SpousePersonalInformation.Address" id="spouse_current_address"/>
+                        <ValidationMessage For="@(() => Model.SpousePersonalInformation.Address)"/>
+                    </div>
+                    <div>
+                        <label for="spouse_age">@Localizer["qe s2 p5"]</label>
+                        <InputNumber type="number" min="0" @bind-Value="Model.SpousePersonalInformation.Age" id="spouse_age"/>
+                        <ValidationMessage For="@(() => Model.SpousePersonalInformation.Age)"/>
+                    </div>
+                </fieldset>
+                }
+            </div>
+        </fieldset>
+        <fieldset class="container_set" disabled="@disabled">
+            <legend>@Localizer["qe s3 t1"]</legend>
+            <div class="box">
+                <fieldset class="info_set">
+                    <legend>@Localizer["qe s t2"]</legend>
+                    <div>
+                        <label for="english">@Localizer["qe s3 p1"]</label>
+                        <InputSelect @bind-Value="Model.LanguageSkills.English" id="english">
+                            <option value=0>@Localizer["qe s3 o1"]</option>
+                            <option value=1>@Localizer["qe s3 o2"]</option>
+                            <option value=2>@Localizer["qe s3 o3"]</option>
+                            <option value=3>@Localizer["qe s3 o4"]</option>
+                        </InputSelect>
+                    </div>
+                    <div>
+                        <label for="franch">@Localizer["qe s3 p2"]</label>
+                        <InputSelect @bind-Value="Model.LanguageSkills.Franch" id="franch">
+                            <option value=0>@Localizer["qe s3 o1"]</option>
+                            <option value=1>@Localizer["qe s3 o2"]</option>
+                            <option value=2>@Localizer["qe s3 o3"]</option>
+                            <option value=3>@Localizer["qe s3 o4"]</option>
+                        </InputSelect>
+                    </div>
+                    <div>
+                        <label for="esl">@Localizer["qe s3 p3"]</label>
+                        <InputText type="text" @bind-Value="Model.LanguageSkills.Esl" id="esl"/>
+                        <ValidationMessage For="@(() => Model.LanguageSkills.Esl)"/>
+                    </div>
+                </fieldset>
+                @if(Model.MarriageStatus != 0)
+                {
+                <fieldset class="info_set">
+                    <legend>@Localizer["qe s t3"]</legend>
+                    <div>
+                        <label for="franch">@Localizer["qe s3 p1"]</label>
+                        <InputSelect @bind-Value="Model.SpouseLanguageSkills.English" id="spouse_english">
+                            <option value=0>@Localizer["qe s3 o1"]</option>
+                            <option value=1>@Localizer["qe s3 o2"]</option>
+                            <option value=2>@Localizer["qe s3 o3"]</option>
+                            <option value=3>@Localizer["qe s3 o4"]</option>
+                        </InputSelect>
+                    </div>
+                    <div>
+                        <label for="franch">@Localizer["qe s3 p1"]</label>
+                        <InputSelect @bind-Value="Model.SpouseLanguageSkills.Franch" id="spouse_franch">
+                            <option value=0>@Localizer["qe s3 o1"]</option>
+                            <option value=1>@Localizer["qe s3 o2"]</option>
+                            <option value=2>@Localizer["qe s3 o3"]</option>
+                            <option value=3>@Localizer["qe s3 o4"]</option>
+                        </InputSelect>
+                    </div>
+                    <div>
+                        <label for="spouse_esl">@Localizer["qe s3 p3"]</label>
+                        <InputText type="text" @bind-Value="Model.SpouseLanguageSkills.Esl" id="spouse_esl"/>
+                        <ValidationMessage For="@(() => Model.SpouseLanguageSkills.Esl)"/>
+                    </div>
+                </fieldset>
+                }
+            </div>
+        </fieldset>
+        <fieldset class="container_set" disabled="@disabled">
+            <legend>@Localizer["qe s4 t1"]</legend>
+            <div class="box">
+                <fieldset class="info_set">
+                    <legend>@Localizer["qe s t2"]</legend>
+                    <div>
+                        <label for="school_years">@Localizer["qe s4 p1"]</label>
+                        <InputNumber type="number" min="0" @bind-Value="Model.Education.SchoolYears" id="school_years"/>
+                    </div>
+                    <div>
+                        <label for="collage">@Localizer["qe s4 p2"]</label>
+                        <InputSelect @bind-Value="Model.Education.Collage" id="collage">
+                            <option value=0>@Localizer["qe s4 p2 o1"]</option>
+                            <option value=1>@Localizer["qe s4 p2 o2"]</option>
+                            <option value=2>@Localizer["qe s4 p2 o3"]</option>
+                            <option value=3>@Localizer["qe s4 p2 o4"]</option>
+                            <option value=4>@Localizer["qe s4 p2 o5"]</option>
+                        </InputSelect>
+                    </div>
+                    <div>
+                        <label for="collage_years">@Localizer["qe s4 p3"]</label>
+                        <InputNumber type="number" min="0" @bind-Value="Model.Education.CollageYears" id="collage_years"/>
+                    </div>
+                    <div>
+                        <label for="profession">@Localizer["qe s4 p4"]</label>
+                        <InputText type="text" @bind-Value="Model.Education.Profession" id="profession"/>
+                        <ValidationMessage For="@(() => Model.Education.Profession)"/>
+                    </div>
+                </fieldset>
+                @if(Model.MarriageStatus != 0)
+                {
+                <fieldset class="info_set">
+                    <legend>@Localizer["qe s t3"]</legend>
+                    <div>
+                        <label for="spouse_school_years">@Localizer["qe s4 p1"]</label>
+                        <InputNumber type="number" min="0" @bind-Value="Model.SpouseEducation.SchoolYears" id="spouse_school_years"/>
+                    </div>
+                    <div>
+                        <label for="spouse_collage">@Localizer["qe s4 p2"]</label>
+                        <InputSelect @bind-Value="Model.SpouseEducation.Collage" id="spouse_collage">
+                            <option value=0>@Localizer["qe s4 p2 o1"]</option>
+                            <option value=1>@Localizer["qe s4 p2 o2"]</option>
+                            <option value=2>@Localizer["qe s4 p2 o3"]</option>
+                            <option value=3>@Localizer["qe s4 p2 o4"]</option>
+                            <option value=4>@Localizer["qe s4 p2 o5"]</option>                        </InputSelect>
+                    </div>
+                    <div>
+                        <label for="spouse_collage_years">@Localizer["qe s4 p3"]</label>
+                        <InputNumber type="number" min="0" @bind-Value="Model.SpouseEducation.CollageYears" id="spouse_collage_years"/>
+                    </div>
+                    <div>
+                        <label for="profession">@Localizer["qe s4 p4"]</label>
+                        <InputText type="text" @bind-Value="Model.SpouseEducation.Profession" id="spouse_profesion"/>
+                        <ValidationMessage For="@(() => Model.SpouseEducation.Profession)"/>
+                    </div>
+                </fieldset>
+                }
+            </div>
+        </fieldset>
+        <fieldset class="container_set" disabled="@disabled">
+            <legend>@Localizer["qe s5 t1"]</legend>
+            <div class="box m_@Model.MarriageStatus">
+                @{
+                    if(Model.WorkExperience.Count() == 0)
+                    {
+                        Model.WorkExperience.Add(new());
+                        Model.SpouseWorkExperience.Add(new());
+                    }
+
+                    for(var i=0; Model.WorkExperience.Count() > i; i++)
+                    {
+                        var copy = i;
+                        var id1 = "speciality_" + i;
+                        var id2 = "work_years_" + i;
+
+                        var id3 = "spouse_"+id1;
+                        var id4 = "spouse_"+id2;
+
+                        <fieldset class="info_set">
+                            <legend>@Localizer["qe s t2"]</legend>
+                            <div>
+                                <label for="@id1">@Localizer["qe s5 p1"]</label>
+                                <InputText type="text" @bind-Value="Model.WorkExperience[copy].Profession" id="@id1"/>
+                                <ValidationMessage For="@(() => Model.WorkExperience[copy].Profession)"/>
+                            </div>
+                            <div>
+                                <label for="@id2">@Localizer["qe s5 p2"]</label>
+                                <InputNumber type="number" min="0" @bind-Value="Model.WorkExperience[copy].Experience" id="@id2"/>
+                            </div>
+                        </fieldset>
+                        if(Model.MarriageStatus != 0)
+                        {
+                        <fieldset class="info_set">
+                            <legend>@Localizer["qe s t3"]</legend>
+                            <div>
+                                <label for="@id3">@Localizer["qe s5 p1"]</label>
+                                <InputText type="text" @bind-Value="Model.SpouseWorkExperience[copy].Profession" id="@id3"/>
+                                <ValidationMessage For="@(() => Model.SpouseWorkExperience[copy].Profession)"/>
+                            </div>
+                            <div>
+                                <label for="@id4">@Localizer["qe s5 p2"]</label>
+                                <InputNumber type="number" min="0" @bind-Value="Model.SpouseWorkExperience[copy].Experience" id="@id4"/>
+                            </div>
+                        </fieldset>
+                        }
+                    }
+                }
+                <div class="jobs_action">
+                    <a class="btn-add" @onclick="AddJob">@Localizer["qe b1"]</a>
+                    @if(Model.WorkExperience.Count() > 1)
+                    {
+                        <a class="btn-add" @onclick="RemoveJob">@Localizer["qe b2"]</a>
+                    }
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="container_set" disabled="@disabled">
+            <legend>@Localizer["qe s6 t1"]</legend>
+            <div class="q_box">
+                <div>
+                    <InputCheckbox @bind-Value="Model.InCanada" id="q1"/>
+                    <label for="q1">@Localizer["qe s6 p1"]</label>
+                </div>
+                <div>
+                    <InputCheckbox @bind-Value="Model.FamilyInCanada" id="q2"/>
+                    <label for="q2">@Localizer["qe s6 p2"]</label>
+                </div>
+                <div>
+                    <InputCheckbox @bind-Value="Model.AppliedInCanada" id="q3"/>
+                    <label for="q3">@Localizer["qe s6 p3"]</label>
+                </div>
+                <div>
+                    <InputCheckbox @bind-Value="Model.DeniedInCanada" id="q4"/>
+                    <label for="q4">@Localizer["qe s6 p4"]</label>
+                </div>
+                <div>
+                    <InputCheckbox @bind-Value="Model.JobOffered" id="q5"/>
+                    <label for="q5">@Localizer["qe s6 p5"]</label>
+                </div>
+                <div>
+                    <InputCheckbox @bind-Value="Model.GonnaStudy" id="q6"/>
+                    <label for="q6">@Localizer["qe s6 p6"]</label>
+                </div>
+                <div>
+                    <InputCheckbox @bind-Value="Model.MedicalProblems" id="q7"/>
+                    <label for="q7">@Localizer["qe s6 p7"]</label>
+                </div>
+                <div>
+                    <InputCheckbox @bind-Value="Model.GonnaStudyHard" id="q8"/>
+                    <label for="q8">@Localizer["qe s6 p8"]</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="case" id="q9" value="q9">
+                    <label for="q9">@Localizer["qe s6 p9"]</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="case" id="q10" value="q10">
+                    <label for="q10">@Localizer["qe s6 p10"]</label>
+                </div>
+            </div>
+        </fieldset>
+        <div class="button_div">
+        <button id="qe_button" class="btn-2 @GetButtonClass()">
+            @switch(status)
+            {
+                case 1:
+                    @Localizer["qe m1"];
+                    break;
+                case 2:
+                    @Localizer["qe m2"];
+                    break;
+                case 3:
+                    @Localizer["qe m3"];
+                    break;
+                default:
+                    @Localizer["qe b3"];
+                    break;
+
+            }
+        </button>
+        <a @onclick="@(()=>Navigation.NavigateTo("/"))">@Localizer["qe b4"]</a>
+        </div>
+    </EditForm>
+</div>
+
+@code{
+    Questionnaire Model = new();
+    private bool firstLoad = true;
+    int status;
+    string? disabled => status > 1 ? "disabled" : null;
+    string? GetButtonClass()
+    {
+        switch (status)
+        {
+            case 1: return "error";
+            case 2: return "success";
+            case 3: return "working";
+            default: return null;
+        }
+    }
+
+    private void AddJob()
+    {
+        if(status == 2 || status == 3) return;
+        Model.WorkExperience.Add(new());
+        Model.SpouseWorkExperience.Add(new());
+    }
+
+    private void RemoveJob()
+    {
+        if(status == 2 || status == 3) return;
+        Model.WorkExperience.RemoveAt(Model.WorkExperience.Count() - 1);
+        Model.SpouseWorkExperience.RemoveAt(Model.SpouseWorkExperience.Count() - 1);
+    }
+
+    async void SubmitValidForm()
+    {
+        if(status > 1) return;
+
+        status = 3;
+        await JS.InvokeAsync<string>("scrollToEnd");
+        await Task.Delay(1500);
+        status = 2;
+        StateHasChanged();
+    }
+    void InvalidForm() => status = 1;
+    void ClearError() => status = 0;
+
+
+    protected override void OnInitialized()
+    {
+        firstLoad = true;
+    }
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        if(!firstLoad) return;
+        firstLoad = false;
+        AppState.CloseBg();
+    }
+}

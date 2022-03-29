@@ -10,9 +10,13 @@
 @using Microsoft.Extensions.Localization
 @using Microsoft.Extensions.Configuration
 @using System.Globalization
+@using Blazored.FluentValidation
 @using Immigration
 @using Immigration.Shared
 @inject IStringLocalizer<App> Localizer
 @inject AppState AppState
+@inject IJSRuntime JS
+@inject NavigationManager NavManager;
+@inject PageNavigation Navigation;
 @* @using Immigration.Components *@
 @* @inject IViewLocalizer Localizer *@

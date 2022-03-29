@@ -3,6 +3,8 @@ public class AppState
     public bool MenuCollapsed { get; set; }
     public string? MenuClass { get; set; }
     public string? DarkBgClass { get; set; }
+    public string? LightBgClass { get; set; }
+    public string? PopupClass { get; set; }
 
     public void CloseMenu()
     {
@@ -15,6 +17,38 @@ public class AppState
     {
         MenuCollapsed = !MenuCollapsed;
         MenuAction();
+    }
+
+    public void OpenBg()
+    {
+        LightBgClass = "open";
+        Refresh();
+    }
+
+    public async void CloseBg()
+    {
+        if(LightBgClass == "close" || LightBgClass == "closed") return;
+        LightBgClass = "close";
+        Refresh();
+        await Task.Delay(300);
+        LightBgClass = "closed";
+        Refresh();
+    }
+
+    public void OpenPopup()
+    {
+        DarkBgClass = "open";
+        PopupClass = "open";
+        Refresh();
+    }
+    public async void ClosePopup()
+    {
+        DarkBgAction();
+        PopupClass = "close";
+        Refresh();
+        await Task.Delay(300);
+        PopupClass = null;
+        Refresh();
     }
 
     public event Action? OnChange;

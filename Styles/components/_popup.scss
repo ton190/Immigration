@@ -1,0 +1,53 @@
+@use '../basic' as *;
+.popup{
+    z-index:12;
+    position: fixed;
+    top: 0;
+    left: 150px;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-content: center;
+    perspective: 150vh;
+    display: none;
+    border: 0.3em solid transparent;
+      margin: -0.3em;
+
+    .container{
+        padding: pg(200);
+        border: 0.3em solid transparent;
+        margin: -0.3em;
+    }
+
+    &.open{
+        display: grid;
+        .container{
+            animation: pa_open .4s ease forwards;
+        }
+    }
+    &.close{
+        display: grid;
+        .container{
+            animation: pa_close .3s ease forwards;
+        }
+    }
+
+    @keyframes pa_open{
+        from{
+            transform: scale(0) rotateX(90deg);
+        }
+        to{
+            transform: none;
+        }
+    }
+    @keyframes pa_close{
+        from{
+            // transform: none;
+            opacity: 1;
+        }
+        to{
+            opacity: 0;
+            // transform: scale(0) rotateX(-90deg);
+        }
+    }
+}

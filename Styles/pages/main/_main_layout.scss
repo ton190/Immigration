@@ -52,13 +52,14 @@
         section{
             // border: 1px solid black;
             justify-self: center;
-            padding: pg(200);
+            // padding: pg(200);
+            margin: pg(200);
             max-width: 1200px;
             display: grid;
             gap: pg(600);
-            scroll-margin: 35px;
+            scroll-margin: 50px;
             @include mq(md){
-                scroll-margin: 50px;
+                scroll-margin: 80px;
                 justify-items: center;
             }
         }

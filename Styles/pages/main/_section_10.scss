@@ -6,30 +6,34 @@
         flex-wrap: wrap-reverse;
         justify-content: center;
         .box{
-            padding: pg(400);
+            max-width: 400px;
+            padding: 0 pg(400);
             background-image: url("/pics/flag.webp");
             background-size: auto 100%;
             display: grid;
             gap: pg(400);
+            align-content: end;
             text-align: center;
             > div{
                 display: grid;
                 gap: pg(200);
-                // justify-items: center;
             }
             p{
                 margin: 0;
+                font-weight: 500;
             }
             .icons{
                 display: flex;
-                flex-wrap: wrap;
                 gap: pg(100);
                 justify-content: center;
                 align-items: center;
-                > div{
-                    display: grid;
-                    gap: pg(50);
-                    justify-items: center;
+                img{
+                    transition: all .3s ease;
+                    &:hover{
+                        transform: scale(1.1);
+                        filter: brightness(120%);
+                        cursor: pointer;
+                    }
                 }
             }
             button{
@@ -37,7 +41,7 @@
             }
         }
          .img1{
-            max-width:450px;
+            max-width: 450px;
             height: auto;
             width: 100%
         }

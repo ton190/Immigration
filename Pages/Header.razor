@@ -6,7 +6,7 @@
             @((MarkupString)string.Format(@Localizer["h p1"], "<br>"))
         </div>
     </div>
-    <div class="questionaire btn-1">@Localizer["h p2"]</div>
+    <div @onclick="@(()=>Navigation.NavigateTo("/questionaire"))" class="questionaire btn-1">@Localizer["h p2"]</div>
     <p class="call">
         @((MarkupString)string.Format(@Localizer["h p3"], "<br>"))
     </p>

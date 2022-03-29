@@ -1,5 +1,4 @@
 @page "/"
-
 <PageTitle>TreVisa - @Localizer["page title"]</PageTitle>
 
 
@@ -8,7 +7,12 @@
         <div class=""><NavMenu/></div>
     </div>
     <div class="right_panel">
-        <div class="dark_bg @AppState?.DarkBgClass"></div>
+        <div class="dark_bg @AppState?.DarkBgClass @_popupOpen"></div>
+        <div class="popup @AppState?.PopupClass">
+            <div class="container">
+                <Request/>
+            </div>
+        </div>
         <div class="top_panel">
             <MenuToggle Collapsed="@_toggle_class"/>
             <ChooseLanguage/>
@@ -24,6 +28,7 @@
             <Section_4/>
             <Section_5/>
             <Section_6/>
+            <Section_7/>
             <Section_8/>
             <Section_9/>
             <Section_10/>
@@ -33,7 +38,7 @@
             <Section_14/>
             <Section_15/>
             <Section_16/>
-            <Section_17/>
+            @* <Section_17/> *@
         </div>
             <Footer/>
     </div>
@@ -46,6 +51,8 @@
 @code{
     private bool _collapsed = false;
     private string? _toggle_class => AppState.MenuCollapsed ? "open" : null;
+    private string? _popupOpen => AppState?.PopupClass != null ? "popup_open" : null;
+    private bool firstLoad = true;
 
     private void Toggle()
     {
@@ -55,6 +62,14 @@
     protected override void OnInitialized()
     {
         AppState.OnChange += StateHasChanged;
+        firstLoad = true;
+    }
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        if(!firstLoad) return;
+        firstLoad = false;
+        AppState.CloseBg();
     }
 
     public void Dispose()

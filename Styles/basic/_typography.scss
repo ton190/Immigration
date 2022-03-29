@@ -18,12 +18,16 @@ $colors: (
         text: hsla(0,0%,0%),
 
         menu_bg: hsl(37, 100%, 91%),
-        footer: hsla(207,88%,24%),
+        footer: hsla(207,88%,24%, 0.95),
 
         warning: hsla(350,100%,50%),
         warning_2: hsla(350,100%,90%),
+        warning_3: hsla(350,100%,25%),
+        success: hsla(100, 100%, 25%),
 
         box_shadow: hsla(0, 0%, 0%, 0.2),
+        box_shadow_input: hsla(0, 0%, 0%, 0.5),
+        box_shadow_input_error: hsla(350, 100%, 50%, 0.5),
 
         highlight_1: hsl(16, 100%, 68%),
         highlight_2: hsl(29, 100%, 85%),
@@ -39,6 +43,7 @@ $colors: (
 
         btn2_text: hsla(100,100%,100%),
         btn2_bg: hsla(218,53%,39%),
+        btn2_bg_h: hsla(100, 80%,29%),
     ),
     menu_toggle: (
         bg: black,
@@ -65,7 +70,7 @@ body{
     color: clr(primary, text);
 }
 html{
-    scroll-behavior: smooth;
+    // scroll-behavior: smooth;
 }
 @for $i from 1 through 6
 {

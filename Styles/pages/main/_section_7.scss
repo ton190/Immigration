@@ -1,0 +1,160 @@
+@use '../../basic' as *;
+
+.section_7{
+    justify-content: center;
+    .container{
+        padding-top: pg(200);
+        margin-left: pg(200);
+        .map{
+            display: grid;
+            .point{
+                position: relative;
+                display: grid;
+                grid-auto-flow: column;
+                grid-template-columns: max-content 1fr;
+                align-items: center;
+                gap: pg(200);
+                .p{
+                    z-index: 2;
+                    position: relative;
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 100%;
+                    cursor: pointer;
+
+                    &:before{
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        background: gray;
+                        width: 15px;
+                        height: 15px;
+                        border-radius: 100%;
+                        transition: box-shadow .3s ease;
+                        box-shadow: white 0px 0px 1px 6px,
+                                    black 0px 0px 1px 6px,
+                                    white 0px 0px 1px 15px,
+                                    black 0px 0px 1px 15px;
+                        }
+                    }
+                    .box{
+                        z-index: 3;
+                        display: none;
+                        font-weight: normal;
+                        position: absolute;
+                        top: 50%;
+                        left: 60px;
+                        right: pg(100);
+                        max-width: 350px;
+                        border-radius: 15px;
+                        animation: map_animation .3s ease forwards;
+                        transform: translateY(-50%);
+                        div{
+                            padding: pg(50) pg(200);
+                            background: white;
+                            border-radius: 15px;
+                            box-shadow: hsla(0, 0%, 50%, .5) 0px 0px 5px 1px;
+                            p{
+                                animation: map_animation .2s .1s ease forwards;
+                                opacity: 0;
+                            }
+                        }
+                        @keyframes map_animation{
+                            from{
+                                opacity: 0;
+                            }
+                            to{
+                                opacity: 1;
+                            }
+                        }
+                    }
+                    .p{
+    border: 0.3em solid transparent;
+      margin: -0.3em;
+                        &:hover{
+                            &:before{
+                                box-shadow: white 0px 0px 1px 10px,
+                                            black 0px 0px 1px 10px,
+                                            white 0px 0px 1px 20px,
+                                            black 0px 0px 1px 20px;
+                            }
+                        }
+                    }
+                    .p:hover ~ div.box{
+                        display: block;
+                    }
+                }
+            .l{
+                position: relative;
+                width: 1px;
+                height: 50px;
+                background: gray;
+                margin-left: 22.5px;
+            }
+        }
+    }
+    @include mq(bg){
+        .container{
+            .map{
+                padding-top: 160px;
+                grid-auto-flow: column;
+                align-items: center;
+                .point{
+                    display: flex;
+                    flex-direction: column-reverse;
+                    gap: 0;
+                }
+                .l{
+                    width: 100px;
+                    height: 1px;
+                    margin: 0;
+                }
+                .box_title{
+                    font-weight: 500;
+                    text-align: center;
+                    width: 250px;
+                    position: absolute;
+                    bottom: 200px;
+                    &:after{
+                        position: absolute;
+                        content: '';
+                        width: 1px;
+                        height: 150px;
+                        left: 50%;
+                        bottom: -160px;
+                        transform: translateX(-50%);
+                        background: gray;
+                    }
+                    &:before{
+                        position: absolute;
+                        content: '';
+                        left: pg(200);
+                        right: pg(200);
+                        bottom: -10px;
+                        height: 1px;
+                        background: gray;
+                    }
+                }
+                .even{
+                    .box_title{
+                        bottom: 120px;
+                        &:after{
+                            bottom: -80px;
+                            height: 70px;
+                        }
+                    }
+                }
+                .point{
+                    .box{
+                        width: 300px;
+                        left: 50%;
+                        top: 4em !important;
+                        transform: translateX(-50%);
+                    }
+                }
+            }
+        }
+    }
+}
