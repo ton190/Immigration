@@ -10,7 +10,7 @@
     grid-auto-flow: column;
     grid-template-columns: 150px auto;
     transform: translateX(-150px);
-    transition: transform .3s linear;
+    transition: transform .3s ease-out;
     &.open{
         transform: none;
         @include mq(md){
@@ -30,6 +30,7 @@
         }
     }
     .left_panel{
+        // background: clr(primary, menu_bg);
         nav{
             padding: 1em;
             display: grid;
@@ -42,10 +43,14 @@
     }
     .body_panel{
         position: relative;
+        // justify-content: center;
         margin: auto;
-        padding-top: 1em;
+        padding-top: 4em;
         display: grid;
         gap: pg(600);
+        @include mq(md){
+            padding-top: 0em;
+        }
         h4{
             font-weight: 400;
         }
@@ -58,20 +63,50 @@
             display: grid;
             gap: pg(600);
             scroll-margin: 50px;
+            justify-items: center;
             @include mq(md){
                 scroll-margin: 80px;
-                justify-items: center;
+            }
+            .section_title{
+                text-align: center;
             }
         }
     }
     .language{
-        padding: pg(200);
+        // padding: pg(200);
+        font-weight: bold;
+        padding-top: 0;
         display: grid;
         grid-auto-flow: column;
         justify-content: right;
         gap: .5em;
-        img{
+        div{
+            display: flex;
+            align-items: center;
+            gap: .25em;
             cursor: pointer;
+            transition: all .3s ease;
+            img{
+                transition: all .3s ease;
+            }
+            &:hover, &.selected{
+                color: clr(primary, highlight_5);
+                img{
+                    // filter: brightness(120%);
+                }
+            }
+            &.selected{
+            }
+        }
+        position: absolute;
+        padding: .4rem .8rem;
+        padding-bottom: 0;
+        top:0;
+        right: 0;
+        z-index: 10;
+        @include mq(md){
+            position: relative;
+            background: none;
         }
     }
      hr{

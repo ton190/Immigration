@@ -6,8 +6,11 @@
             @((MarkupString)string.Format(@Localizer["h p1"], "<br>"))
         </div>
     </div>
-    <div @onclick="@(()=>Navigation.NavigateTo("/questionaire"))" class="questionaire btn-1">@Localizer["h p2"]</div>
+    <div @onclick="@(()=>Navigation.NavigateTo("/questionaire"))" class="questionaire btn-1">
+        <div class="btn-2 btn-a1"><span>@Localizer["h p2"]</span></div>
+        <img src="pics/visa_icon.webp">
+    </div>
     <p class="call">
-        @((MarkupString)string.Format(@Localizer["h p3"], "<br>"))
+        <img src="pics/phone_small.webp"> @Localizer["h p3"]
     </p>
 </header>

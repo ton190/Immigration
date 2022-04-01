@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 public class RequestModelValidator : AbstractValidator<RequestModel>
 {
     private string _regPhone = @"^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$";
-    private string _regString = @"^[a-zA-Z]";
+    /* private string _regString = @"^[a-zA-Z]"; */
 
     public RequestModelValidator(IStringLocalizer<App> Localizer)
     {
@@ -34,8 +34,9 @@ public class RequestModelValidator : AbstractValidator<RequestModel>
 
     private bool IsString(string? input)
     {
-        if (input == "" || input is null) return true;
-        return Regex.IsMatch(input, _regString);
+        /* if (input == "" || input is null) return true; */
+        /* return Regex.IsMatch(input, _regString); */
+        return true;
     }
     private bool IsShort(string? input)
     {

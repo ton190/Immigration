@@ -1,5 +1,5 @@
 @page "/"
-<PageTitle>TreVisa - @Localizer["page title"]</PageTitle>
+<PageTitle>Legal Visa Services - @Localizer["page title"]</PageTitle>
 
 
 <div class="main_layout @AppState?.MenuClass">
@@ -14,6 +14,7 @@
             </div>
         </div>
         <div class="top_panel">
+            <span id="home"></span>
             <MenuToggle Collapsed="@_toggle_class"/>
             <ChooseLanguage/>
         </div>
@@ -38,15 +39,10 @@
             <Section_14/>
             <Section_15/>
             <Section_16/>
-            @* <Section_17/> *@
         </div>
             <Footer/>
     </div>
 </div>
-
-@* <h1>@Localizer["Title"]</h1> *@
-@* <h2>The Current culture is "@CultureInfo.CurrentCulture"</h2> *@
-@* <p>@DateTime.UtcNow.ToString()</p> *@
 
 @code{
     private bool _collapsed = false;

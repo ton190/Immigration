@@ -18,6 +18,7 @@ $colors: (
         text: hsla(0,0%,0%),
 
         menu_bg: hsl(37, 100%, 91%),
+        anketa_bg: hsl(37, 100%, 91%),
         footer: hsla(207,88%,24%, 0.95),
 
         warning: hsla(350,100%,50%),
@@ -30,6 +31,7 @@ $colors: (
         box_shadow_input_error: hsla(350, 100%, 50%, 0.5),
 
         highlight_1: hsl(16, 100%, 68%),
+        highlight_1_1: hsl(16, 100%, 38%),
         highlight_2: hsl(29, 100%, 85%),
         highlight_3: hsl(0, 0%, 85%),
         highlight_4: hsl(0, 0%, 95%),
@@ -43,14 +45,19 @@ $colors: (
 
         btn2_text: hsla(100,100%,100%),
         btn2_bg: hsla(218,53%,39%),
+        btn2_b2: hsla(218,53%,39%,.1),
         btn2_bg_h: hsla(100, 80%,29%),
+
+        a1: hsla(0,100%,100%,.7),
     ),
     menu_toggle: (
-        bg: black,
-        strips: white,
+        bg: white,
+        strips: black,
     )
 );
-
+.components-reconnect-show, .components-reconnect-failed, .components-reconnect-rejected {
+     // display: none;
+}
 @import url(
     'https://fonts.googleapis.com/css2?family=Material+Icons&family=Roboto:ital,' +
     'wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');

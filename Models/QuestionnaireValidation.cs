@@ -6,7 +6,7 @@ using Microsoft.Extensions.Localization;
 public class QuestionnaireValidator : AbstractValidator<Questionnaire>
 {
     private string _regPhone = @"^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$";
-    private string _regString = @"^[a-zA-Z]";
+    /* private string _regString = @"^[a-zA-Zа-яА-Я]"; */
 
     public QuestionnaireValidator(IStringLocalizer<App> Localizer)
     {
@@ -83,8 +83,9 @@ public class QuestionnaireValidator : AbstractValidator<Questionnaire>
 
     private bool IsString(string? input)
     {
-        if (input == "" || input is null) return true;
-        return Regex.IsMatch(input, _regString);
+        return true;
+        /* if (input == "" || input is null) return true; */
+        /* return Regex.IsMatch(input, _regString); */
     }
     private bool IsShort(string? input)
     {

@@ -3,9 +3,15 @@
 
 @if(cultures != null)
 {
-    <div class="language" id="home">
-        <img src="pics/en_icon.webp" @onclick="@(()=>RequestCultureChange("en"))">
-        <img src="pics/ru_icon.webp" @onclick="@(()=>RequestCultureChange("ru"))">
+    <div class="language">
+        <div @onclick="@(()=>RequestCultureChange("en"))" class="@lang_class?["en"]">
+            <img src="pics/en_icon.webp">
+            <span>En</span>
+        </div>
+        <div @onclick="@(()=>RequestCultureChange("ru"))" class="@lang_class?["ru"]">
+            <img  src="pics/ru_icon.webp">
+            <span>Ru</span>
+        </div>
     </div>
 }
 
@@ -14,11 +20,18 @@
         .CurrentCulture.Name;
 
     private Dictionary<string, string>? cultures;
+    private Dictionary<string, string>? lang_class = new();
 
     protected override void OnInitialized()
     {
         cultures = Configuration.GetSection("Cultures")
             .GetChildren().ToDictionary(x => x.Key, x=> x.Value);
+
+        foreach(var x in cultures)
+        {
+            var val = x.Key == selectedCulture ? "selected" : "";
+            lang_class?.Add(x.Key, val);
+        }
     }
 
     private async void RequestCultureChange(string selectedCulture)

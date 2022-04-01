@@ -1,3 +1,7 @@
+@using NETCore.MailKit.Core
+@inject IEmailService EmailService;
+@inject RazorViewToStringRenderer _render;
+
 <EditForm Model="Model" OnValidSubmit="@OnValidSubmit" OnInvalidSubmit="InvalidForm" @oninput="ClearError">
     <fieldset class="request" disabled="@disabled">
     <FluentValidationValidator />
@@ -58,7 +62,7 @@
         if(status > 1) return;
 
         status = 3;
-        await Task.Delay(1500);
+        await SendEmail();
         status = 2;
         StateHasChanged();
     }
@@ -72,5 +76,14 @@
         Model = new();
         status = 0;
         StateHasChanged();
+    }
+
+    private async Task SendEmail()
+    {
+        string sbj = $"Request For Consultation From {Model.Name} - {Model.Email}";
+        string email = "info@canavisas.com";
+        var htmlBody = await _render.RenderViewToStringAsync("Shared/ConsultationEmailTemplate.cshtml", Model);
+        await EmailService.SendAsync(email, sbj, htmlBody, true);
+    }
     }
 }

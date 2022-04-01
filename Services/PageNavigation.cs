@@ -16,6 +16,5 @@ public class PageNavigation
         AppState.OpenBg();
         await Task.Delay(300);
         NavManager.NavigateTo(url);
-        /* AppState.CloseBg(); */
     }
 }

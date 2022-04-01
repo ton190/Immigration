@@ -136,8 +136,7 @@
     <value>FAQ</value>
   </data>
   <data name="h p3" xml:space="preserve">
-    <value>Call, we are working now{0}
-+1(647)648-7822</value>
+    <value>+1(647)648-7822</value>
   </data>
   <data name="h p2" xml:space="preserve">
     <value>Questionnaire: Rate Your Chances</value>
@@ -361,16 +360,16 @@ Based on{0}
     <value>Permanent resident</value>
   </data>
   <data name="s6 p5.1" xml:space="preserve">
-    <value>Work Permit with LMIA exemption, business – inside Canada</value>
+    <value>Express Entry</value>
   </data>
   <data name="s6 p5.2" xml:space="preserve">
-    <value>Work Permit with LMIA exemption, business – inside Canada</value>
+    <value>Provincial Nomination</value>
   </data>
   <data name="s6 p5.3" xml:space="preserve">
-    <value>Work Permit with LMIA exemption, business – inside Canada</value>
+    <value>Spousal Sponsorship, Inside Canada</value>
   </data>
   <data name="s6 p5.4" xml:space="preserve">
-    <value>Work Permit with LMIA exemption, business – inside Canada</value>
+    <value>Spousal Sponsorship, Outside Canada</value>
   </data>
   <data name="s6 t2" xml:space="preserve">
     <value>Please note all prices are in USD and government fees are not included.{0}
@@ -550,7 +549,7 @@ worked in the profession or not. Likewise, your work experience is assessed rega
 or not you have relevant education.</value>
   </data>
   <data name="s17 t1" xml:space="preserve">
-    <value>Contact Us</value>
+    <value>Office Toronto</value>
   </data>
   <data name="s17 b1" xml:space="preserve">
     <value>Send</value>
@@ -848,5 +847,8 @@ or not you have relevant education.</value>
   </data>
   <data name="s7 p7.4" xml:space="preserve">
     <value>We inform about programs of retraining, social support and so on.</value>
+  </data>
+  <data name="logo" xml:space="preserve">
+    <value>Visa and Immigration Consulting</value>
   </data>
 </root>

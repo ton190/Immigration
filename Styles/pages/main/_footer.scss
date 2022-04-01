@@ -92,14 +92,14 @@ footer{
                 // grid-auto-rows: auto;
             }
         }
-        a{
-            color: white;
-            cursor: pointer;
-            transition: color .1s ease;
-            text-decoration: underline;
-            &:hover{
-                mix-blend-mode: exclusion;
-            }
+    }
+    .box a{
+        color: white;
+        cursor: pointer;
+        transition: color .1s ease;
+        text-decoration: underline;
+        &:hover{
+            mix-blend-mode: exclusion;
         }
     }
 }

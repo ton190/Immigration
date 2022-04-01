@@ -3,6 +3,8 @@ using System.Text.Encodings.Web;
 using System.Text.Unicode;
 using FluentValidation;
 using Microsoft.Extensions.WebEncoders;
+using NETCore.MailKit.Extensions;
+using NETCore.MailKit.Infrastructure.Internal;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
@@ -14,6 +16,9 @@ builder.Services.Configure<WebEncoderOptions>(opt =>
     opt.TextEncoderSettings = new TextEncoderSettings(UnicodeRanges.All));
 builder.Services.AddScoped<AppState>();
 builder.Services.AddScoped<PageNavigation>();
+builder.Services.AddMailKit(config => config.UseMailKit(
+        builder.Configuration.GetSection("Email").Get<MailKitOptions>()));
+builder.Services.AddScoped<RazorViewToStringRenderer>();
 
 RequestLocalizationOptions GetLocalizationOptions()
 {
@@ -28,7 +33,7 @@ RequestLocalizationOptions GetLocalizationOptions()
         localizationOptions
         .AddSupportedCultures(supportedCultures)
         .AddSupportedUICultures(supportedCultures)
-        .SetDefaultCulture("ru");
+        .SetDefaultCulture("en");
     }
 
     return localizationOptions;

@@ -1,6 +1,7 @@
 @use '../../basic' as *;
 
 .section_11{
+        max-width: 800px !important;
     .warning{
         display: grid;
         gap: pg(200);
@@ -31,11 +32,12 @@
         flex-wrap: wrap;
         justify-content: center;
         div{
+            flex: 1 1 200px;
             padding: pg(200);
             text-align: center;
             box-shadow: clr(primary, warning_2) 0 0 5px 1px;
             border-radius: 25px;
-            max-width: 250px;
+            // max-width: 250px;
             display: grid;
             justify-items: center;
             &:nth-child(1){

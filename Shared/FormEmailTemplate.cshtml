@@ -1,0 +1,370 @@
+@model Questionnaire
+
+<html>
+    <head>
+        <style>
+            :root{
+                  box-sizing: border-box;
+            }
+            *{
+                padding: 0;
+                margin: 0;
+            }
+
+            legend{
+                font-weight: bold;
+                font-size: 1.2em;
+                padding: 0 1em;
+            }
+
+            .body{
+                font-size: .9rem;
+                padding: 1em;
+                display: grid;
+            }
+            fieldset{
+                padding: 1em;
+                display: grid;
+                max-width: 800px;
+            }
+            th{
+                text-align: left;
+                min-width: 220px;
+                width: 33%;
+            }
+            tr td{
+                width: 67%;
+            }
+            table{
+             border-collapse: separate;
+             border-spacing: .5em;
+            }
+            table.main tr td{
+                width: 67%;
+            }
+        </style>
+        @if(Model.MarriageStatus > 0)
+        {
+            <style>
+            tr td{
+                width: 33%;
+            }
+            </style>
+        }
+    </head>
+    <body>
+        <div class="body">
+        <h2>Request For An Assessment Of The Immigration Opportunity</h2>
+        <fieldset>
+            <legend>Main information</legend>
+            <table class="main">
+                <tr>
+                <th>Marital status</th>
+                    @switch(Model.MarriageStatus)
+                    {
+                        case 1: <td>Official marriage</td>; break;
+                        case 2: <td>Civil marriage</td>; break;
+                        default: <td>Single</td>; break;
+                    }
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td>@Model.Email</td>
+                </tr>
+                <tr>
+                    <th>Phone</th>
+                    <td>@Model.Phone</td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset>
+            <legend>Personal information</legend>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    @if(string.IsNullOrEmpty(Model.PersonalInformation.Name))
+                    {
+                        <td>N/A</td>
+                    }
+                    else
+                    {
+                        <td>@Model.PersonalInformation.Name</td>
+                    }
+                    @if(Model.MarriageStatus > 0)
+                    {
+                        if(string.IsNullOrEmpty(Model.SpousePersonalInformation.Name))
+                        {
+                            <td>N/A</td>
+                        }
+                        else
+                        {
+                            <td>@Model.SpousePersonalInformation.Name</td>
+                        }
+                    }
+                </tr>
+                <tr>
+                    <th>City and country of residence</th>
+                    @if(string.IsNullOrEmpty(Model.PersonalInformation.Address))
+                    {
+                        <td>N/A</td>
+                    }
+                    else
+                    {
+                        <td>@Model.PersonalInformation.Address</td>
+                    }
+                    @if(Model.MarriageStatus > 0)
+                    {
+                        if(string.IsNullOrEmpty(Model.SpousePersonalInformation.Address))
+                        {
+                            <td>N/A</td>
+                        }
+                        else
+                        {
+                            <td>@Model.SpousePersonalInformation.Address</td>
+                        }
+                    }
+                </tr>
+                <tr>
+                    <th>Age</th>
+                    @if(Model.PersonalInformation.Age == 0)
+                    {
+                        <td>N/A</td>
+                    }
+                    else
+                    {
+                        <td>@Model.PersonalInformation.Age</td>
+                    }
+                    @if(Model.MarriageStatus > 0)
+                    {
+                        if(Model.SpousePersonalInformation.Age == 0)
+                        {
+                            <td>N/A</td>
+                        }
+                        else
+                        {
+                            <td>@Model.SpousePersonalInformation.Age</td>
+                        }
+                    }
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset>
+            <legend>Language skills</legend>
+            <table>
+                <tr>
+                    <th>English</th>
+                    @switch(Model.LanguageSkills.English)
+                    {
+                        case 1: <td>A little</td>; break;
+                        case 2: <td>Average</td>; break;
+                        case 3: <td>Good</td>; break;
+                        default: <td>Do not know</td>; break;
+                    }
+                    @if(Model.MarriageStatus > 0)
+                    {
+                        switch(Model.SpouseLanguageSkills.English)
+                        {
+                            case 1: <td>A little</td>; break;
+                            case 2: <td>Average</td>; break;
+                            case 3: <td>Good</td>; break;
+                            default: <td>Do not know</td>; break;
+                        }
+                    }
+                </tr>
+                <tr>
+                    <th>Franch</th>
+                    @switch(Model.LanguageSkills.Franch)
+                    {
+                        case 1: <td>A little</td>; break;
+                        case 2: <td>Average</td>; break;
+                        case 3: <td>Good</td>; break;
+                        default: <td>Do not know</td>; break;
+                    }
+                    @if(Model.MarriageStatus > 0)
+                    {
+                        switch(Model.SpouseLanguageSkills.Franch)
+                        {
+                            case 1: <td>A little</td>; break;
+                            case 2: <td>Average</td>; break;
+                            case 3: <td>Good</td>; break;
+                            default: <td>Do not know</td>; break;
+                        }
+                    }
+                </tr>
+                <tr>
+                    <th>English Tests</th>
+                    @if(string.IsNullOrEmpty(Model.LanguageSkills.Esl))
+                    {
+                        <td>N/A</td>
+                    }
+                    else
+                    {
+                        <td>@Model.LanguageSkills.Esl</td>
+                    }
+                    @if(Model.MarriageStatus > 0)
+                    {
+                        if(string.IsNullOrEmpty(Model.SpouseLanguageSkills.Esl))
+                        {
+                            <td>N/A</td>
+                        }
+                        else
+                        {
+                            <td>@Model.SpouseLanguageSkills.Esl</td>
+                        }
+                    }
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset>
+            <legend>Education</legend>
+            <table>
+                <tr>
+                    <th>How many years in school?</th>
+                    @if(Model.Education.SchoolYears == 0)
+                    {
+                        <td>N/A</td>
+                    }
+                    else
+                    {
+                        <td>@Model.Education.SchoolYears</td>
+                    }
+                    @if(Model.MarriageStatus > 0)
+                    {
+                        if(Model.SpouseEducation.SchoolYears == 0)
+                        {
+                            <td>N/A</td>
+                        }
+                        else
+                        {
+                            <td>@Model.SpouseEducation.SchoolYears</td>
+                        }
+                    }
+                </tr>
+                <tr>
+                    <th>Higher education</th>
+                    @switch(Model.Education.Collage)
+                    {
+                        case 1: <td>Undergraduate</td>; break;
+                        case 2: <td>Collage</td>; break;
+                        case 3: <td>University</td>; break;
+                        case 4: <td>Mester</td>; break;
+                        default: <td>No</td>; break;
+                    }
+                    @if(Model.MarriageStatus > 0)
+                    {
+                        switch(Model.SpouseEducation.Collage)
+                        {
+                            case 1: <td>Undergraduate</td>; break;
+                            case 2: <td>Collage</td>; break;
+                            case 3: <td>University</td>; break;
+                            case 4: <td>Mester</td>; break;
+                            default: <td>No</td>; break;
+                        }
+                    }
+                </tr>
+                <tr>
+                    <th>How many years for higher education?</th>
+                    @if(Model.Education.CollageYears == 0)
+                    {
+                        <td>N/A</td>
+                    }
+                    else
+                    {
+                        <td>@Model.Education.CollageYears</td>
+                    }
+                    @if(Model.MarriageStatus > 0)
+                    {
+                        if(Model.SpouseEducation.CollageYears == 0)
+                        {
+                            <td>N/A</td>
+                        }
+                        else
+                        {
+                            <td>@Model.SpouseEducation.CollageYears</td>
+                        }
+                    }
+                </tr>
+                <tr>
+                    <th>Profession</th>
+                    @if(string.IsNullOrEmpty(Model.Education.Profession))
+                    {
+                        <td>N/A</td>
+                    }
+                    else
+                    {
+                        <td>@Model.Education.Profession</td>
+                    }
+                    @if(Model.MarriageStatus > 0)
+                    {
+                        if(string.IsNullOrEmpty(Model.SpouseEducation.Profession))
+                        {
+                            <td>N/A</td>
+                        }
+                        else
+                        {
+                            <td>@Model.SpouseEducation.Profession</td>
+                        }
+                    }
+                </tr>
+            </table>
+        </fieldset>
+        @for(var i=0; i< Model.WorkExperience.Count(); i++)
+        {
+            <fieldset>
+                <legend>Work experience</legend>
+                <table>
+                    <tr>
+                        <th>Profession</th>
+                        @if(string.IsNullOrEmpty(Model.WorkExperience[i].Profession))
+                        {
+                            <td>N/A</td>
+                        }
+                        else
+                        {
+                            <td>@Model.WorkExperience[i].Profession</td>
+                        }
+                        @if(Model.MarriageStatus > 0)
+                        {
+                            if(string.IsNullOrEmpty(Model.SpouseWorkExperience[i].Profession))
+                            {
+                                <td>N/A</td>
+                            }
+                            else
+                            {
+                                <td>@Model.SpouseWorkExperience[i].Profession</td>
+                            }
+                        }
+                    </tr>
+                    <tr>
+                        <th>Number of years of experience</th>
+                        <td>@Model.WorkExperience[i].Experience</td>
+                        @if(Model.MarriageStatus > 0)
+                        {
+                            <td>@Model.SpouseWorkExperience[i].Experience</td>
+                        }
+                    </tr>
+                </table>
+            </fieldset>
+        }
+        <fieldset>
+            <legend>Conditions</legend>
+            <div class='conditions'>
+                @if(Model.InCanada){<p>Client is in Canada</p>}
+                @if(Model.JobOffered){<p>An employer in Canada offered client a job</p>}
+                @if(Model.GotLawyer){<p>Client previously contacted a companies or a Canadian lawyers</p>}
+                @if(Model.DeniedInCanada){<p>Client were denied a Canadian visa or immigration to Canada</p>}
+                @if(Model.MedicalProblems){<p>Client or his family have significant medical problems</p>}
+
+                @if(Model.AppliedInCanada){<p>Client has applied to immigrate to Canada</p>}
+                @if(Model.CriminalRecord){<p>Client has a criminal record</p>}
+                @if(Model.FamilyInCanada){<p>Client's close relatives are permanent residents of Canada</p>}
+                @if(Model.GonnaStudy){<p>Client is planning to study in Canada</p>}
+                @if(Model.GonnaStudyHard){<p>Client is planning on pursuing higher education in Canada</p>}
+            </div>
+        </fieldset>
+        </div>
+    </body>
+</html>

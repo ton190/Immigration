@@ -2,8 +2,9 @@
 
 .section_13{
     .container{
-        width: 100%;
-        max-width: 800px;
+        // width:100%;
+        // width: max-content;
+        // max-width: 800px;
         display: grid;
         div{
             font-size: fs(300);
@@ -30,6 +31,9 @@
         }
         div:nth-child(odd){
             justify-self: left;
+        }
+        @include mq(md){
+            width: 100%;
         }
     }
 }

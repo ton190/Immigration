@@ -7,7 +7,7 @@
     left: 150px;
     padding: .8rem;
     background: clr(menu_toggle, bg);
-    width: max-content;
+    width: 100%;
     display: grid;
     align-content: end;
     @include mq(md){

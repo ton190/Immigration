@@ -37,19 +37,22 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        @include mq(md){
-            justify-content: space-between;
-        }
+        // @include mq(md){
+        //     justify-content: space-between;
+        // }
         gap: pg(400);
         .box{
+            flex: 1 1 180px;
             display: grid;
             gap: pg(200);
             justify-items: center;
-            width: 180px;
             box-shadow: clr(primary, box_shadow) 0 0 5px 1px;
             margin: 5px;
             border-radius: 5px;
             padding: pg(200);
+            @include mq(sm){
+                // max-width: 180px;
+            }
             p{
                 text-align: center;
             }

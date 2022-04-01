@@ -136,8 +136,7 @@
     <value>Вопросы</value>
   </data>
   <data name="h p3" xml:space="preserve">
-    <value>Звоните, мы сейчас работаем{0}
-+1(647)648-7822</value>
+    <value>+1(647)648-7822</value>
   </data>
   <data name="h p2" xml:space="preserve">
     <value>Анкета: Оцените Ваши Шансы</value>
@@ -361,16 +360,16 @@
     <value>ПМЖ</value>
   </data>
   <data name="s6 p5.1" xml:space="preserve">
-    <value>Work Permit with LMIA exemption, business – inside Canada</value>
+    <value>Экспресс-вьезд</value>
   </data>
   <data name="s6 p5.2" xml:space="preserve">
-    <value>Work Permit with LMIA exemption, business – inside Canada</value>
+    <value>Провинциальная номинация</value>
   </data>
   <data name="s6 p5.3" xml:space="preserve">
-    <value>Work Permit with LMIA exemption, business – inside Canada</value>
+    <value>Супружеское спонсорство внутри Канады</value>
   </data>
   <data name="s6 p5.4" xml:space="preserve">
-    <value>Work Permit with LMIA exemption, business – inside Canada</value>
+    <value>Супружеское спонсорство за пределами Канады</value>
   </data>
   <data name="s6 t2" xml:space="preserve">
     <value>Обратите внимание все цены в долларах США и государсвенные пошлины не включины.{0}
@@ -529,7 +528,7 @@
 свой диплом и другие документы в WES для оценки, или мне нужно следовать другому подходу?</value>
   </data>
   <data name="s17 t1" xml:space="preserve">
-    <value>Связаться с Нами</value>
+    <value>Офис в Торото</value>
   </data>
   <data name="s17 b1" xml:space="preserve">
     <value>Отправить</value>
@@ -849,5 +848,8 @@
   </data>
   <data name="s7 p7.4" xml:space="preserve">
     <value>Информируем о программах переобучения, социальной поддержки и прочее.</value>
+  </data>
+  <data name="logo" xml:space="preserve">
+    <value>Визовый и иммиграционный консалтинг</value>
   </data>
 </root>

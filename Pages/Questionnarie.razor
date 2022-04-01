@@ -1,4 +1,8 @@
 @page "/questionaire"
+@using NETCore.MailKit.Core
+@inject IEmailService EmailService;
+@inject RazorViewToStringRenderer _render;
+
 <div class="chance">
     <EditForm Model="Model" OnValidSubmit="@SubmitValidForm" OnInvalidSubmit="InvalidForm" @oninput="ClearError">
         <h2>@Localizer["h p2"]</h2>
@@ -358,8 +362,9 @@
         if(status > 1) return;
 
         status = 3;
+
         await JS.InvokeAsync<string>("scrollToEnd");
-        await Task.Delay(1500);
+        await SendEmail();
         status = 2;
         StateHasChanged();
     }
@@ -377,5 +382,13 @@
         if(!firstLoad) return;
         firstLoad = false;
         AppState.CloseBg();
+    }
+
+    private async Task SendEmail()
+    {
+        string sbj = $"Assesment Request From {Model.PersonalInformation.Name} - {Model.Email}";
+        string email = "info@canavisas.com";
+        var htmlBody = await _render.RenderViewToStringAsync("Shared/FormEmailTemplate.cshtml", Model);
+        await EmailService.SendAsync(email, sbj, htmlBody, true);
     }
 }

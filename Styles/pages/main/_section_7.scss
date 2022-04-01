@@ -32,11 +32,36 @@
                         width: 15px;
                         height: 15px;
                         border-radius: 100%;
-                        transition: box-shadow .3s ease;
+                        transition: box-shadow .3s ease,
+                                    background .3s ease;
+
+                        outline: 1px solid clr(btn, btn1_bg2);
+                        outline-color: clr(btn, btn1_bg2);
+
                         box-shadow: white 0px 0px 1px 6px,
                                     black 0px 0px 1px 6px,
                                     white 0px 0px 1px 15px,
                                     black 0px 0px 1px 15px;
+                        animation: a-1 1.5s ease alternate infinite,
+                                   a-2 3s ease infinite;
+                        @keyframes a-1{
+                            0%{
+                                background: gray;
+                            }
+                            100%{
+                                background: hsla(16,50%,50%);
+                            }
+                        }
+                        @keyframes a-2{
+                            0%{
+                                  outline-offset: 0px;
+                                  outline-color: clr(btn, btn1_bg2);
+                            }
+                            100%{
+                                  outline-offset: 50px;
+                                  outline-color: rgba(0, 0, 0, 0);
+                            }
+                        }
                         }
                     }
                     .box{
@@ -71,10 +96,12 @@
                         }
                     }
                     .p{
-    border: 0.3em solid transparent;
-      margin: -0.3em;
+                        border: 0.3em solid transparent;
+                        margin: -0.3em;
                         &:hover{
                             &:before{
+                                background: hsla(16,20%,50%);
+                                // background: clr(primary, highlight_1);
                                 box-shadow: white 0px 0px 1px 10px,
                                             black 0px 0px 1px 10px,
                                             white 0px 0px 1px 20px,

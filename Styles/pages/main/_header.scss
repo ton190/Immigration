@@ -3,18 +3,17 @@
 header{
     justify-self: center;
     max-width: 1200px;
-    width: 100%;
     position: relative;
     display: grid;
     grid-template-areas:
-    "logo"
-    "call"
-    "rating"
-    "questionaire";
+    "logo logo"
+    "call rating"
+    "questionaire questionaire";
     justify-items: center;
     align-items: center;
     gap: pg(400);
     @include mq(md){
+        width: 100%;
         grid-template-areas:
         "logo logo logo"
         "rating questionaire call";
@@ -40,26 +39,31 @@ header{
     .questionaire{
         grid-area: questionaire;
         position: relative;
-        padding: pg(200);
+        // padding: pg(200);
         white-space: nowrap;
-        box-shadow: clr(primary, box_shadow) 0px 0px 5px 1px;
-        background: clr(primary, menu_bg);
-        border-radius: .1em;
-        &:before{
+        // box-shadow: clr(primary, box_shadow) 0px 0px 5px 1px;
+        background: clr(btn, btn2_bg);
+        color: white;
+        border-radius: 25px;
+        img{
             z-index: -1;
-            content: url("/pics/visa_icon.webp");
             position: absolute;
-            bottom: 5px;
+            bottom: 0px;
             right: -45px;
             width: 70px;
             height: 70px;
         }
     }
     .call{
+        display: flex;
+        align-items: center;
         padding: 0;
+        gap: pg(50);
         margin: 0;
         grid-area: call;
         white-space: nowrap;
         text-align: center;
+        font-weight: 500;
+        font-size: 1.1em;
     }
 }
