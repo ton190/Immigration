@@ -41,6 +41,7 @@ RequestLocalizationOptions GetLocalizationOptions()
 
 var app = builder.Build();
 
+app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRequestLocalization(GetLocalizationOptions());
 app.UseRouting();
@@ -49,3 +50,5 @@ app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");
 
 app.Run();
+
+

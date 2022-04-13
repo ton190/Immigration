@@ -33,7 +33,7 @@
                     @Localizer["qe m3"];
                     break;
                 default:
-                    @Localizer["p b1"]
+                    @Localizer["p b1"];
                     break;
 
             }
@@ -84,6 +84,5 @@
         string email = "info@canavisas.com";
         var htmlBody = await _render.RenderViewToStringAsync("Shared/ConsultationEmailTemplate.cshtml", Model);
         await EmailService.SendAsync(email, sbj, htmlBody, true);
-    }
     }
 }

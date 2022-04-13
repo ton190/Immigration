@@ -30,6 +30,7 @@ public class RequestModelValidator : AbstractValidator<RequestModel>
             .WithMessage(String.Format(Localizer["qe e3"], Localizer["qe s2 p3"]))
             .Must(IsString)
             .WithMessage(String.Format(Localizer["qe e2"], Localizer["qe s2 p3"]));
+
     }
 
     private bool IsString(string? input)
