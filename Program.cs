@@ -35,7 +35,6 @@ RequestLocalizationOptions GetLocalizationOptions()
         .AddSupportedUICultures(supportedCultures)
         .SetDefaultCulture("en");
     }
-
     return localizationOptions;
 }
 
